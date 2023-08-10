@@ -9,8 +9,8 @@ this is my new dotfiles
 
 ### Preview
 
-![dwm](https://github.com/SweetMask4/dotfiles-v2/blob/screenshot/dwm.png?raw=true)
-![dmenu](https://github.com/SweetMask4/dotfiles-v2/blob/screenshot/dmenu.png?raw=true)
+![dwm](https://github.com/SweetMask4/dotfiles-v2/blob/screenshot/dwm.jpg?raw=true)
+![dmenu](https://github.com/SweetMask4/dotfiles-v2/blob/screenshot/dmenu.jpg?raw=true)
 
 ## About setup
 
