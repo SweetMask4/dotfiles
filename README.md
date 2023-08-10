@@ -30,7 +30,7 @@ this is my new dotfiles
 - Image Preview: [Sxiv](https://github.com/muennich/sxiv)
 - Wallpaper Setter: [xwallpaper](https://github.com/stoeckmann/xwallpaper)
 - Screenshot: [main](https://github.com/naelstrof/maim)
-- Video Player: [mpv]
+- Video Player: mpv
 - Browser: [librewolf](https://librewolf.net/)
   - Firefox css [Cascade](https://github.com/andreasgrafen/cascade)
 - Notification Daemon: [Dunst](https://github.com/SweetMask4/dotfiles/blob/main/.config/dunst/dunstrc)
