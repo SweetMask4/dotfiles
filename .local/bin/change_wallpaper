@@ -1,0 +1,27 @@
+#!/usr/bin/env sh
+
+setbg() {
+    case "$XDG_SESSION_TYPE" in
+      'x11')
+          pkill xwallpaper
+          xwallpaper --stretch "$1"
+          ;;
+      'wayland')
+          pkill swaybg
+          swaybg -m "stretch" -i "$1"
+          ;;
+      *) echo "Unknown display server" ;;
+    esac
+}
+
+wallpaper_dir="$HOME/Pictures/wallpapers"
+config_file="$HOME/.config/wall"
+wallpapers=$(find "$wallpaper_dir" -type f \( -name '*.jpg' -o -name '*.png' \) | shuf -n 1)
+
+if [ -n "$wallpapers" ]; then
+    setbg "$wallpapers"
+    echo "$wallpapers" > "$config_file"
+else
+    echo "No wallpapers found in $wallpaper_dir" >&2
+fi
+

@@ -1,0 +1,18 @@
+#!/usr/bin/env sh
+
+# This script will change the current keyboard layout
+
+# Get the current keyboard layout
+ACTUAL_KEYMAP="$(setxkbmap -query | awk '/layout/{print $2}')"
+
+# Set new keymap and notification
+if [ "$ACTUAL_KEYMAP" = "us" ]; then
+    NEW_KEYMAP="es"
+else
+    NEW_KEYMAP="us"
+fi
+
+NOTIFICATION="Keymap was changed to $(echo $NEW_KEYMAP | awk '{print toupper(substr($0, 1, 1)) substr($0, 2)}')"
+
+setxkbmap "$NEW_KEYMAP"
+notify-send 'Changed keymap' "$NOTIFICATION"

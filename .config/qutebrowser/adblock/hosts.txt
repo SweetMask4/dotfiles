@@ -1,0 +1,13 @@
+https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
+https://raw.githubusercontent.com/AdAway/adaway.github.io/master/hosts.txt
+https://raw.githubusercontent.com/MetaMask/eth-phishing-detect/master/src/hosts.txt
+https://urlhaus.abuse.ch/downloads/hostfile/
+https://raw.githubusercontent.com/shreyasminocha/shady-hosts/main/hosts
+https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&mimetype=plaintext&useip=0.0.0.0
+https://www.github.developerdan.com/hosts/lists/ads-and-tracking-extended.txt
+https://someonewhocares.org/hosts/
+https://raw.githubusercontent.com/DandelionSprout/adfilt/master/TwitchPureViewingExperience.txt
+https://raw.githubusercontent.com/DandelionSprout/adfilt/master/AntiAmazonListForTwitch.txt
+https://raw.githubusercontent.com/bongochong/CombinedPrivacyBlockLists/master/newhosts-final.hosts
+https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&showintro=1&mimetype=plaintext
+https://winhelp2002.mvps.org/hosts.txt

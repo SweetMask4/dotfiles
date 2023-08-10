@@ -1,0 +1,10 @@
+# -*- mode: conf -*-
+set synctex true
+set synctex-editor-command "emacsclient +%{line} %{input}"
+
+set font "Iosevka Custom 10"
+include catppuccin-mocha
+
+# set recolor "true"
+# set recolor-keephue "true"
+set guioptions none

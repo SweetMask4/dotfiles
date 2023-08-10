@@ -1,0 +1,16 @@
+#!/usr/bin/env sh
+
+# Folder where the wallpaper images are located
+wallpaper_dir="$HOME/Pictures/wallpapers"
+
+# File path to store the current image location
+config_file="$HOME/.config/wall"
+
+# Get a list of images in the wallpaper folder
+wallpapers=$(find "$wallpaper_dir" -type f \( -name '*.jpg' -o -name '*.png' \) | shuf -n 1)
+
+# Set the wallpaper using xwallpaper
+xwallpaper --stretch "$wallpapers"
+
+# Save the current image location to the config file
+echo "$wallpapers" > "$config_file"

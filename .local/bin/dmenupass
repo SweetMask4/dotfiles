@@ -1,0 +1,22 @@
+#!/bin/env bash
+
+# This script is the SUDO_ASKPASS variable, meaning that it will be used as a
+# password prompt if needed.
+
+. ~/scripts/config/config || exit 1
+
+# Define the help message.
+HELP="Please enter your password to proceed."
+
+# Prompt the user to enter their password.
+PASSWORD=$($DMENU "$HELP" <&-)
+
+# Check if the user entered a password.
+if [ -n "$PASSWORD" ]; then
+    # Return the password to the calling program.
+    echo "$PASSWORD"
+else
+    # If the user did not enter a password, print an error message.
+    echo "Error: no password entered."
+    exit 1
+fi

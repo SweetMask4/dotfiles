@@ -1,0 +1,162 @@
+### Functions ###
+
+### Function extract for common file formats ###
+SAVEIFS=$IFS
+IFS=$(echo -en "\n\b")
+
+ex(){
+    if [ -z "$1" ]; then
+        # display usage if no parameters given
+        echo "Usage: extract <path/file_name>.<zip|rar|bz2|gz|tar|tbz2|tgz|Z|7z|xz|ex|tar.bz2|tar.gz|tar.xz>"
+        echo "       extract <path/file_name_1.ext> [path/file_name_2.ext] [path/file_name_3.ext]"
+    else
+        for n in "$@"
+        do
+            if [ -f "$n" ] ; then
+                case "${n%,}" in
+                    *.cbt|*.tar.bz2|*.tar.gz|*.tar.xz|*.tbz2|*.tgz|*.txz|*.tar)
+                        tar xvf "$n"       ;;
+                    *.lzma)      unlzma ./"$n"      ;;
+                    *.bz2)       bunzip2 ./"$n"     ;;
+                    *.cbr|*.rar)       unrar x -ad ./"$n" ;;
+                    *.gz)        gunzip ./"$n"      ;;
+                    *.cbz|*.epub|*.zip)       unzip ./"$n"       ;;
+                    *.z)         uncompress ./"$n"  ;;
+                    *.7z|*.arj|*.cab|*.cb7|*.chm|*.deb|*.dmg|*.iso|*.lzh|*.msi|*.pkg|*.rpm|*.udf|*.wim|*.xar)
+                        7z x ./"$n"        ;;
+                    *.xz)        unxz ./"$n"        ;;
+                    *.exe)       cabextract ./"$n"  ;;
+                    *.cpio)      cpio -id < ./"$n"  ;;
+                    *.cba|*.ace)      unace x ./"$n"      ;;
+                    *)
+                        echo "extract: '$n' - unknown archive method"
+                        return 1
+                        ;;
+                esac
+            else
+                echo "'$n' - file does not exist"
+                return 1
+            fi
+        done
+    fi
+}
+
+IFS=$SAVEIFS
+# End extract
+
+# pacman
+function paclist() {
+  pacman -Qqe | xargs -I{} -P0 --no-run-if-empty pacman -Qs --color=auto "^{}\$"
+}
+
+# clean /tmp
+clean_tmp(){
+sudo find /tmp -type f -atime +10 -delete
+echo "clean /tmp"
+}
+
+# navegation
+fcd(){
+cd "$(find -type d | fzf)"
+}
+open(){
+xdg-open "$(find -type f | fzf)"
+}
+
+# Function for creating a backup file
+# ex: backup file.txt or backup foldername
+# result: copies file as file.txt.bak
+backub(){
+    file=$1
+    cp -r "$file" "$file".bak
+}
+
+# Function for restore a backup file
+restore(){
+    file=$1
+    file2="${file//.bak/}"
+    mv "$file" "$file2"
+}
+
+# reload zsh config
+reload(){
+    source "$HOME/.config/zsh/.zshrc"
+}
+
+# create a new script
+newsh(){
+    file=$1
+    touch "$file"
+    echo "#!/usr/bin/env sh" >> "$file"
+    chmod +x "$file"
+}
+
+# mathematical function
+math() {
+    echo $(( $@ ))
+}
+
+# to know the dependencies of a package
+depends()  {
+    search="$1"
+    sudo pacman -Sii "$search" | grep "Required" | sed -e "s/Required By     : //g" | sed -e "s/  /\n/g"
+}
+
+mount_iso() {
+    if [ -z "$1" ]; then
+        echo "Error: you must specify the location of the ISO file."
+        return 1
+    fi
+
+    if [ ! -f "$1" ]; then
+        echo "Error: the specified ISO file does not exist."
+        return 1
+    fi
+
+    if [ ! -d "/mnt" ]; then
+        echo "Error: the /mnt directory does not exist. Please create the directory before using this function."
+        return 1
+    fi
+
+    sudo mount -o loop "$1" /mnt
+    echo "ISO file mounted to /mnt."
+}
+
+### COUNTDOWN
+cdown () {
+    N=$1
+    while [[ $((--N)) -gt  0 ]]
+    do
+        echo "$N" |  figlet -c | lolcat &&  sleep 1
+    done
+}
+
+### recompile WM ###
+recompile_xmonad(){
+    [ -d "$XMONAD_CACHE_DIR" ] || mkdir -p "$XMONAD_CACHE_DIR"
+    xmonad --recompile
+}
+
+recompile_dwm(){
+    [ -f config.h ] && rm -i config.h
+    sudo make clean install
+}
+
+#
+function pdf_to_png() {
+    convert -verbose -density 350 -trim "$1" -quality 100 -flatten "${1%.pdf}".png
+}
+
+function pdf_compress() {
+    gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/ebook -dNOPAUSE -dQUIET -dBATCH -sOutputFile="$1_compressed" "$1" && mv "$1_compressed" "$1"
+}
+
+function create() {
+    mkdir -p "$1" && cd "$1"
+}
+
+function acp() {
+  git add .
+  git commit -m "$1"
+  git push
+}

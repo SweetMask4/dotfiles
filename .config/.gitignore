@@ -1,0 +1,28 @@
+# Ignore everything
+/*
+!.gitignore
+
+# Except for the files and folders we want to track
+!alacritty
+!fish
+!starship
+!htop
+!lf
+!shell
+!zsh
+!sxiv
+!paru
+!wget
+!X11
+!wall
+!zathura
+!nano
+!nvim
+!picom
+!qutebrowser
+!yad.conf
+!bat
+!emacs
+!dunst
+!gtk-2.0
+!gtk-3.0

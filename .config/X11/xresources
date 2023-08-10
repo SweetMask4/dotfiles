@@ -1,0 +1,85 @@
+! -*- mode: conf -*-
+Xft.dpi: 96
+Xft.antialias: true
+Xft.hinting: true
+Xft.rgba: rgb
+Xft.autohint: true
+Xft.hintstyle: hintfull
+Xft.lcdfilter: lcdfilter
+
+XTerm*renderFont: true
+XTerm*faceName: JetBrainsMono Nerd Font
+XTerm*faceSize: 12
+XTerm*utf8: 2
+XTerm*locale: true
+
+XTerm.vt100.translations: #override \n\
+  Ctrl <Key> j: smaller-vt-font() \n\
+  Ctrl <Key> k: larger-vt-font() \n\
+  Ctrl Shift <Key>C: copy-selection(CLIPBOARD) \n\
+  Ctrl Shift <Key>V: insert-selection(CLIPBOARD)
+
+! Every shell is a login shell by default (for inclusion of all necessary environment variables)
+XTerm*loginshell: true
+
+! I like a LOT of scrollback...
+XTerm*savelines: 16384
+
+! double-click to select whole URLs :D
+XTerm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
+
+XTerm.termName: xterm-256color
+XTerm*buffered: false
+XTerm.intensityStyles: false
+XTerm.font: JetBrainsMono Nerd Font
+XTerm.saveLines: 2000
+XTerm.scrollBar: false
+XTerm.cursorColor: white
+
+! COLORS FOR SXIV
+Sxiv.foreground:   #bbc2cf
+Sxiv.background:   #282c34
+Sxiv.font: Ubuntu:style=bold:size=11
+
+! FOR ALL OTHER PROGRAMS USE XRESOURCES
+! This includes xterm and urxvt
+
+
+! background and foreground
+XTerm*background: #1E1E2E
+XTerm*foreground: #CDD6F4
+
+! cursor color
+XTerm*cursorColor: #F5E0DC
+
+! black
+XTerm*color0: #45475A
+XTerm*color8: #585B70
+
+! red
+XTerm*color1: #F38BA8
+XTerm*color9: #F38BA8
+
+! green
+XTerm*color2: #A6E3A1
+XTerm*color10: #A6E3A1
+
+! yellow
+XTerm*color3: #F9E2AF
+XTerm*color11: #F9E2AF
+
+! blue
+XTerm*color4: #89B4FA
+XTerm*color12: #89B4FA
+
+! magenta
+XTerm*color5: #F5C2E7
+XTerm*color13: #F5C2E7
+
+! cyan
+XTerm*color6: #94E2D5
+XTerm*color14: #94E2D5
+
+! white
+XTerm*color7: #BAC2DE
+XTerm*color15: #A6ADC8
