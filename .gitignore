@@ -5,15 +5,9 @@
 
 # Except for the files and folders we want to track
 !README.md
-!README.es.md
-!.pkgs
-!.screenshots
+!LICENSE
 !.bashrc
 !.zshrc
-!.tmux.conf.local
-!.xprofile
-!.Xresources
-!.src
 !.bashrc
 !.bash_profile
 !.zshenv
