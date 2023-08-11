@@ -3,8 +3,7 @@
 # This script is the SUDO_ASKPASS variable, meaning that it will be used as a
 # password prompt if needed.
 
-. ~/scripts/config/config || exit 1
-
+DMENU="dmenu_run -p"
 # Define the help message.
 HELP="Please enter your password to proceed."
 

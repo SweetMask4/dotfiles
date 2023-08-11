@@ -1,8 +1,0 @@
-#!/usr/bin/env sh
-
-# This environment variable ensures that Java applications are rendered correctly
-export _JAVA_AWT_WM_NONREPARENTING=1
-
-# Run dmenu with the specified options, passing any additional arguments to the command
-# The resulting command is executed using the user's default shell, or /bin/sh if none is set
-exec $(dmenu_path | dmenu -p 'Run: ' "$@" | ${SHELL:-"/bin/sh"})

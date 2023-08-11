@@ -35,12 +35,7 @@ select_interface() {
 
     read -rp "Choose an option: " choice
 
-    if ! [[ "$choice" =~ ^[0-9]+$ ]]; then
-        echo "Invalid option."
-        exit 1
-    fi
-
-    if (( choice >= 1 && choice <= counter - 1 )); then
+    if [[ "$choice" -ge 1 && "$choice" -le "$counter" && "$choice" =~ ^[0-9]+$ ]]; then
         INTERFACE=$(echo "$interfaces" | sed -n "${choice}p")
         echo "You have selected the interface: $INTERFACE"
     else
@@ -54,6 +49,5 @@ case "$1" in
     start) start ;;
     stop) stop ;;
     *) echo "Invalid option. Please enter 'start' or 'stop'."
-       echo "Please run this script with sudo." ;;
+        echo "Please run this script with sudo." ;;
 esac
-
