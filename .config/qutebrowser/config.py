@@ -145,7 +145,7 @@ c.content.blocking.hosts.lists += hosts_links
 c.editor.command = [os.environ["TERMINAL"], "-e", os.environ["EDITOR"], "-f", "{file}", "-c", "normal {line}G{column0}l"]
 
 # Enable smooth scrolling
-c.scrolling.smooth = True
+c.scrolling.smooth = False
 
 # Set content cache size to 50MB (52428800 bytes)
 c.content.cache.size = 52428800
