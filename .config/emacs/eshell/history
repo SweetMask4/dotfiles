@@ -1,0 +1,7 @@
+clear 
+cd .config/emacs/esh
+cd .config/emacs
+cd eshell/
+dir 
+nvim aliases 
+exit
