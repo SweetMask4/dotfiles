@@ -34,7 +34,7 @@ HISTCONTROL=ignoreboth
 HISTSIZE=1000
 HISTFILESIZE=2000
 HISTFILE="$XDG_STATE_HOME/bash/history"
-mkdir -p "$XDG_STATE_HOME/bash" 
+#if [ -d  ] mkdir -p "$XDG_STATE_HOME/bash" 
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
