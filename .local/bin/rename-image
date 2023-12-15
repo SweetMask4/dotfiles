@@ -1,10 +1,9 @@
-#!/usr/bin/env sh
+#!/bin/dash
 
 # Function to confirm the action
 confirm_action() {
     while true; do
-        echo "Are you sure you want to rename the images? (Y/N)"
-        read -r response
+        read -rp "Are you sure you want to rename the images? (Y/N) " response
         case $response in
             [Yy]* )
                 return 0
@@ -28,8 +27,19 @@ if [ -z "$directory" ]; then
 fi
 
 if [ -z "$number" ]; then
-    echo "Enter an initial number:"
-    read -r number
+    read -rp "Do you want to start naming files from the current number of files in the directory? (Y/N) " response
+    case $response in
+        [Yy]* )
+            number=$(find "$directory" -maxdepth 1 -type f | wc -l)
+            ;;
+        [Nn]* )
+            read -rp "Enter an initial number: " number
+            ;;
+        * )
+            echo "Please respond with Y for 'Yes' or N for 'No'"
+            exit 1
+            ;;
+    esac
 fi
 
 i="$number"

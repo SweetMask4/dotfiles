@@ -2,7 +2,7 @@
 # / __\ \ /\ / / _ \/ _ \ __| | '_ ` _ \ / _` / __| |/ /
 # \__ \\ V  V /  __/  __/ |_  | | | | | | (_| \__ \   <
 # |___/ \_/\_/ \___|\___|\__| |_| |_| |_|\__,_|___/_|\_\
-#
+    #
 #
 # If not running interactively, don't do anything
 
@@ -34,7 +34,7 @@ HISTCONTROL=ignoreboth
 HISTSIZE=1000
 HISTFILESIZE=2000
 HISTFILE="$XDG_STATE_HOME/bash/history"
-#if [ -d  ] mkdir -p "$XDG_STATE_HOME/bash" 
+#if [ -d  ] mkdir -p "$XDG_STATE_HOME/bash"
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -49,22 +49,22 @@ shopt -s checkwinsize
 
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
-    xterm-color|*-256color) color_prompt=yes;;
+    xterm-color|*-256color) color_prompt=yes ;;
 esac
 
 # uncomment for a colored prompt, if the terminal has the capability; turned
 # off by default to not distract the user: the focus in a terminal window
 # should be on the output of commands, not on the prompt
-force_color_prompt=yes
+# force_color_prompt=yes
 
 if [ -n "$force_color_prompt" ]; then
     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-    # We have color support; assume it's compliant with Ecma-48
-    # (ISO/IEC-6429). (Lack of such support is extremely rare, and such
-    # a case would tend to support setf rather than setaf.)
-    color_prompt=yes
+        # We have color support; assume it's compliant with Ecma-48
+        # (ISO/IEC-6429). (Lack of such support is extremely rare, and such
+        # a case would tend to support setf rather than setaf.)
+        color_prompt=yes
     else
-    color_prompt=
+        color_prompt=
     fi
 fi
 
@@ -72,8 +72,8 @@ if [ "$color_prompt" = yes ]; then
     prompt_color='\[\033[1;34m\]'
     path_color='\[\033[1;32m\]'
     if [ "$EUID" -eq 0 ]; then # Change prompt colors for root user
-    prompt_color='\[\033[1;31m\]'
-    path_color='\[\033[1;34m\]'
+        prompt_color='\[\033[1;31m\]'
+        path_color='\[\033[1;34m\]'
     fi
     PS1='['$prompt_color'\u@\h\[\033[00m\] '$path_color'\W\[\033[00m\]]\$ '
     unset prompt_color path_color
@@ -83,12 +83,12 @@ fi
 unset color_prompt force_color_prompt
 
 case ${TERM} in
-  xterm*|rxvt*|Eterm*|aterm|kterm|gnome*|alacritty|st*|konsole*)
-    PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/\~}\007"'
+    xterm*|rxvt*|Eterm*|aterm|kterm|gnome*|alacritty|st*|konsole*)
+        PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/\~}\007"'
         ;;
-  screen*)
-    PROMPT_COMMAND='echo -ne "\033_${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/\~}\033\\"'
-    ;;
+    screen*)
+        PROMPT_COMMAND='echo -ne "\033_${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/\~}\033\\"'
+        ;;
 esac
 
 # enable color support of ls, less and man, and also add handy aliases
@@ -124,13 +124,13 @@ alias l='ls -CF'
 
 # load bash_completion
 if ! shopt -oq posix; then
-  if [ -f /usr/share/bash-completion/bash_completion ]; then
-    . /usr/share/bash-completion/bash_completion
-  elif [ -f /etc/bash_completion ]; then
-    . /etc/bash_completion
-  fi
+    if [ -f /usr/share/bash-completion/bash_completion ]; then
+        . /usr/share/bash-completion/bash_completion
+    elif [ -f /etc/bash_completion ]; then
+        . /etc/bash_completion
+    fi
 fi
 
+# load additional files
 [ -f ~/.config/shell/01-aliases ] && . ~/.config/shell/01-aliases
 [ -f ~/.config/shell/02-functions ] && . ~/.config/shell/02-functions
-

@@ -6,7 +6,7 @@ export VISUAL="emacsclient -c -a emacs"   # Emacs GUI client
 # Default apps
 export MANPAGER="less"                             # man pages with less
 export BROWSER="librewolf"                         # Default web browser
-export TERMINAL="st"
+export TERMINAL="alacritty"
 
 # Cleaning up home folder
 export XDG_DATA_HOME="${XDG_DATA_HOME:="$HOME/.local/share"}"
@@ -34,7 +34,7 @@ export STARSHIP_CONFIG="$XDG_CONFIG_HOME/starship/starship.toml"   # Starship pr
 export XDG_SESSION_TYPE="x11"               # Xorg sessions
 export _JAVA_AWT_WM_NONREPARENTING=1        # Fix for Java applications in dwm
 export AWT_TOOLKIT="MToolkit wmname LG3D"   # May have to install wmname
-export QT_QPA_PLATFORMTHEME="qt5ct"          # Have QT use gtk2 theme.
+export QT_QPA_PLATFORMTHEME="gtk2"          # Have QT use gtk2 theme.
 
 # PATH
 typeset -U path PATH

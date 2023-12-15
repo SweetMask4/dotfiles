@@ -1,0 +1,13 @@
+# -*- mode: conf -*-
+# lf settings file
+set previewer ~/.config/lf/scripts/previewer
+set preview true
+set cleaner ~/.config/lf/scripts/cleaner
+set icons                # Show Nerd Font icons before each item in the list.
+set drawbox              # Draw boxes around panes with box drawing characters. 
+set incsearch            # Jump to the first match after each keystroke during searching. 
+set promptfmt "\033[1;38;5;51m[\033[38;5;39m%u\033[38;5;51m@\033[38;5;39m%h\033[38;5;51m] \033[0;38;5;49m%w\033[38;5;48m%f\033[0m"
+set tabstop 4            # Number of space characters to show for horizontal tab. 
+set hidden true          # Format string of the file modification time shown in the bottom line. 
+set ignorecase true      # Ignore case in sorting and search patterns.
+set truncatechar ⋯       # Truncate character shown at the end when the file name does not fit to the pane. 

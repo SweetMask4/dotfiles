@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/dash
 
 cleanup() {
     ~/.config/lf/scripts/cleaner

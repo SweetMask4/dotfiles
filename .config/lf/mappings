@@ -1,0 +1,77 @@
+# -*- mode: conf -*-
+# lf mappings file
+
+# Remove some defaults
+map m
+map o
+map n
+map "'"
+map '"'
+map d
+map c
+map e
+map f
+
+# Archive Mappings
+map az zip
+map at tar
+map ag targz
+map ab targz
+map au unarchive
+
+# Trash Mappings
+map dd trash
+map tc clear_trash
+map tr restore_trash
+
+map e sudoedit
+
+# Basic Functions
+map . set hidden!
+map DD delete
+map p paste
+map x cut
+map y copy
+map <enter> open
+map mf mkfile
+map mr sudomkfile
+map md mkdir
+map ch chmod
+map bg setwallpaper
+map o shell 
+map r rename
+map H top
+map L bottom
+map <c-r> reload
+map C clear
+map U unselect
+
+# FZF
+map <space> fzf
+map <backspace2> fzf-home
+map <c-b> fzf-edit
+map gs fzf_search
+map <c-f> fzf_jump
+
+# Movement
+map gtr cd ~/.local/share/Trash/files
+
+map gd cd ~/Documents
+map gD cd ~/Downloads
+map ge cd ~/Desktop
+map gv. cd ~/Videos
+map gp. cd ~/Pictures
+
+map gw. cd ~/Pictures/wallpapers
+map gww cd ~/Pictures/Screenshots/
+map gwm cd ~/Pictures/Wallpapers/MobileWallpapers
+
+map gr. cd ~/repos
+map grd cd ~/repos/dotfiles
+map grc cd ~/repos/scripts/
+
+map gc cd ~/.config
+map gl cd ~/.local
+map gE cd /etc
+map gU. cd /usr
+map gUs cd /usr/share

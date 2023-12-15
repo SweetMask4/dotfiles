@@ -1,0 +1,2 @@
+#!/usr/bin/env sh
+echo '{"action": "remove", "identifier": "preview"}' > "$LF_UEBERZUG_TEMPDIR/fifo"

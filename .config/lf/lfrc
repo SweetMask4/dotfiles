@@ -1,0 +1,6 @@
+# Load sub-config files
+source ~/.config/lf/settings
+source ~/.config/lf/commands
+source ~/.config/lf/mappings
+
+

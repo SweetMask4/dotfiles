@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/dash
 
 setbg() {
     case "$XDG_SESSION_TYPE" in

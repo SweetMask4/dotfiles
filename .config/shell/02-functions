@@ -59,6 +59,7 @@ echo "clean /tmp"
 fcd(){
 cd "$(find -type d | fzf)"
 }
+
 open(){
 xdg-open "$(find -type f | fzf)"
 }
@@ -87,7 +88,7 @@ reload(){
 newsh(){
     file=$1
     touch "$file"
-    echo "#!/usr/bin/env sh" >> "$file"
+    echo "#!/bin/sh" >> "$file"
     chmod +x "$file"
 }
 
@@ -132,12 +133,7 @@ cdown () {
 }
 
 ### recompile WM ###
-recompile_xmonad(){
-    [ -d "$XMONAD_CACHE_DIR" ] || mkdir -p "$XMONAD_CACHE_DIR"
-    xmonad --recompile
-}
-
-recompile_dwm(){
+recompile_suckless(){
     [ -f config.h ] && rm -i config.h
     sudo make clean install
 }

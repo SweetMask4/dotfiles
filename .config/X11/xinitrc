@@ -1,4 +1,4 @@
-#!/bin/env sh
+#!/bin/dash
 
 # Load Xorg scripts.
 if [ -d /etc/X11/xinit/xinitrc.d ] ; then
@@ -11,11 +11,11 @@ fi
 # Define function to run processes
 run() {
     if ! pgrep --full "$1" >/dev/null; then
-            "$@" &
+        "$@" &
     fi
 }
 
-# start bar 
+# start bar
 run bar.sh
 
 # Set wallpaper and pywal
@@ -26,15 +26,16 @@ xargs xwallpaper --stretch <~/.config/wall &
 
 # Run processes
 run lxpolkit
-#run picom 
-run dunst 
+run picom
+run dunst
 
 # Run scripts
-run batterynotify 
-run batteryhibernate.sh 
+run batterynotify
+run batteryhibernate.sh
+run mem.sh
 
-xset r rate 200 50 & 
+xset r rate 200 50 &
 xrdb -load ~/.config/X11/xresources & # Load .Xresources settings for urxvt terminals
 xsetroot -cursor_name left_ptr &      # Change X shaped default cursor
 
-while type chadwm >/dev/null; do chadwm && continue || break; done
+while chadwm && type chadwm >/dev/null; do :; done

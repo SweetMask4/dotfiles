@@ -1,0 +1,72 @@
+#!/usr/bin/env sh
+
+# Function to show a file using bat if it is installed, otherwise use cat
+batorcat() {
+    file="$1"
+    shift
+    if command -v bat >/dev/null 2>&1; then
+        bat --color=always --style=plain --pager=never "$file" "$@"
+    else
+        cat "$file"
+    fi
+}
+
+# Function to show a preview of the file using ueberzug
+preview() {
+    cat <<-EOF | paste -sd '' >"$LF_UEBERZUG_TEMPDIR/fifo"
+	{
+	"action": "add", "identifier": "preview",
+	"path": "$1", "x": $4, "y": $5, "width": $2, "height": $3,
+	"scaler": "contain"
+	}
+	EOF
+}
+
+file="$1"; shift
+# Use a case statement to determine how to display the file
+# Use a case statement to determine how to display the file
+case "$(basename "$file" | tr '[:upper:]' '[:lower:]')" in
+    *.tar*) tar tf "$file" ;;
+    *.zip) unzip -l "$file" ;;
+    *.rar) unrar l "$file" ;;
+    *.7z) 7z l "$file" ;;
+    *.avi | *.mp4 | *.mkv)
+        thumbnail="$LF_UEBERZUG_TEMPDIR/thumbnail.png"
+        ffmpeg -y -i "$file" -vframes 1 "$thumbnail"
+        preview "$thumbnail" "$@"
+        ;;
+    *.pdf)
+        thumbnail="$LF_UEBERZUG_TEMPDIR/thumbnail.png"
+        gs -o "$thumbnail" -sDEVICE=pngalpha -dLastPage=1 "$file" >/dev/null
+        preview "$thumbnail" "$@"
+        ;;
+    *.jpg | *.jpeg | *.png | *.bmp)
+        preview "$file" "$@"
+        ;;
+    *.svg)
+        thumbnail="$LF_UEBERZUG_TEMPDIR/thumbnail.png"
+        gm convert "$file" "$thumbnail"
+        preview "$thumbnail" "$@"
+        ;;
+    *.gif)
+        thumbnail="$LF_UEBERZUG_TEMPDIR/thumbnail.png"
+        file1=$(echo "$file" | awk '{print $1}')
+        gm convert "$file1" "$thumbnail"
+        preview "$thumbnail" "$@"
+        ;;
+    *.wav | *.mp3 | *.flac | *.m4a | *.wma | *.ape | *.ac3 | *.og[agx] | *.spx | *.opus | *.as[fx] | *.mka)
+        exiftool "$file"
+        ;;
+    *.mp | *.wmv | *.dat | *.3gp | *.ogv | *.mpg | *.mpeg | *.vob | *.fl[icv] | *.m2v | *.mov | *.webm | *.ts | *.mts | *.m4v | *.r[am] | *.qt | *.divx)
+        thumbnail="$LF_UEBERZUG_TEMPDIR/thumbnail.png"
+        ffmpegthumbnailer -i "$file" -o "$thumbnail" -s 0 -q 5
+        preview "$thumbnail" "$@"
+        ;;
+    *.ino)
+        batorcat --language=cpp "$file"
+        ;;
+    *) batorcat "$file" ;;
+esac
+
+# Return a nonzero return code to force lf to reload the preview
+exit 127

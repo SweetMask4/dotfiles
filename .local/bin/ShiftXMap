@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/dash
 
 # This script will change the current keyboard layout
 

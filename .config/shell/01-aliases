@@ -36,7 +36,7 @@ alias parsyu='paru -Syu'                         # update standard pkgs and AUR 
 alias parscc='paru -Scc'                         # remove paru cache
 alias unlock='sudo rm /var/lib/pacman/db.lck'    # remove pacman lock
 alias cleanup='sudo pacman -Rns $(pacman -Qtdq)' # remove orphaned packages
-alias remove='sudo pacman -Rsc'                  # remove package along with all its dependencies and configuration
+alias update="paru -Syu --nocombinedupgrade"     # upgrades the system but separates aur packages from arch packages
 
 # list package
 alias list="sudo pacman -Qqe"                    # This will generate a list of explicitly installed packages
@@ -125,7 +125,9 @@ alias push='git push origin'
 alias stat='git status'  # 'status' is protected name so using 'stat' instead
 alias tag='git tag'
 alias newtag='git tag -a'
-alias dotfiles="git --git-dir $HOME/.dotfiles/ --work-tree $HOME"
+
+# bare git repo alias for dotfiles
+alias config="/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
 
 # gpg encryption
 # verify signature for isos
@@ -136,17 +138,6 @@ alias gpg-retrieve="gpg2 --keyserver-options auto-key-retrieve --receive-keys"
 # resolv
 alias lockresolv="sudo chattr +i /etc/resolv.conf"
 alias unlockresolv="sudo chattr -i /etc/resolv.conf"
-
-# youtube-dl
-alias yta-aac="youtube-dl --extract-audio --audio-format aac "
-alias yta-best="youtube-dl --extract-audio --audio-format best "
-alias yta-flac="youtube-dl --extract-audio --audio-format flac "
-alias yta-m4a="youtube-dl --extract-audio --audio-format m4a "
-alias yta-mp3="youtube-dl --extract-audio --audio-format mp3 "
-alias yta-opus="youtube-dl --extract-audio --audio-format opus "
-alias yta-vorbis="youtube-dl --extract-audio --audio-format vorbis "
-alias yta-wav="youtube-dl --extract-audio --audio-format wav "
-alias ytv-best="youtube-dl -f bestvideo+bestaudio "
 
 # switch between shells
 # I do not recommend switching default SHELL from bash.
@@ -159,4 +150,4 @@ alias tb="nc termbin.com 9999"
 alias tbc="nc termbin.com 9999 | xclip -selection c"
 
 # the terminal rickroll
-alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
+alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | sh'
