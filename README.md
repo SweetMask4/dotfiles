@@ -23,16 +23,14 @@ this is my new dotfiles
 - Icons: [Papirus](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme) with [Papirus-folders](https://github.com/catppuccin/papirus-folders)
 - Terminal: [Alacritty](https://github.com/alacritty/alacritty)
 - Shell: zsh
-  - Prompt: [starship](https://github.com/AtifChy/dotfiles/blob/main/.config/starship.toml)
 - Editor: [Neovim](https://github.com/AtifChy/dotfiles/tree/main/.config/nvim)
-- Config: [Nvchad](https://nvchad.github.io/)
+    - Config: [Nvchad](https://nvchad.github.io/)
 - Compositor: [Picom](https://github.com/AtifChy/dotfiles/blob/main/.config/picom/picom.conf)
 - Image Preview: [Sxiv](https://github.com/muennich/sxiv)
 - Wallpaper Setter: [xwallpaper](https://github.com/stoeckmann/xwallpaper)
 - Screenshot: [main](https://github.com/naelstrof/maim)
 - Video Player: mpv
 - Browser: [librewolf](https://librewolf.net/)
-  - Firefox css [Cascade](https://github.com/andreasgrafen/cascade)
 - Notification Daemon: [Dunst](https://github.com/SweetMask4/dotfiles/blob/main/.config/dunst/dunstrc)
 - Lockscreen: [slock](https://tools.suckless.org/slock/)
 
