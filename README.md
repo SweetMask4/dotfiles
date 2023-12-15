@@ -9,13 +9,13 @@ this is my new dotfiles
 
 ### Preview
 
-![dwm](https://github.com/SweetMask4/dotfiles-v2/blob/screenshot/dwm.jpg?raw=true)
-![dmenu](https://github.com/SweetMask4/dotfiles-v2/blob/screenshot/dmenu.jpg?raw=true)
+![sweetdwm](https://github.com/SweetMask4/dotfiles/blob/screenshot/main.png?raw=true)
+![dmenu](https://github.com/SweetMask4/dotfiles-v2/blob/screenshot/dmenu.png?raw=true)
 
 ## About setup
 
 - OS:  [Artix Linux](https://wiki.artixlinux.org)
-- WM: [Dwm](https://github.com/SweetMask4/dwm)
+- WM: [sweetdwm](https://github.com/SweetMask4/sweetdwm)
 - Font:
   - Monospace: [JetBrainsMono Nerd Font](https://www.nerdfonts.com/font-downloads)
   - Icon Fonts: [Fontawesome](https://github.com/FortAwesome/Font-Awesome)
