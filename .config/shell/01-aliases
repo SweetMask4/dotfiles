@@ -36,7 +36,6 @@ alias parsyu='paru -Syu'                         # update standard pkgs and AUR 
 alias parscc='paru -Scc'                         # remove paru cache
 alias unlock='sudo rm /var/lib/pacman/db.lck'    # remove pacman lock
 alias cleanup='sudo pacman -Rns $(pacman -Qtdq)' # remove orphaned packages
-alias update="paru -Syu --nocombinedupgrade"     # upgrades the system but separates aur packages from arch packages
 
 # list package
 alias list="sudo pacman -Qqe"                    # This will generate a list of explicitly installed packages

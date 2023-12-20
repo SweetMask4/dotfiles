@@ -11,5 +11,5 @@ while true; do
             kill -9 "$pid"
         fi
     fi
-    sleep 5
+    sleep 60
 done
