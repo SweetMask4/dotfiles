@@ -1,7 +1,6 @@
 # Development
-export ALTERNATE_EDITOR=""
-export EDITOR="nvim"                      # neovim 
-export VISUAL="emacsclient -c -a emacs"   # Emacs GUI client
+export EDITOR="nvim"
+export VISUAL="$EDITOR"
 
 # Default apps
 export MANPAGER="less"                             # man pages with less
