@@ -1,4 +1,4 @@
-#!/bin/dash
+#!/bin/sh
 # The dependencies are pulseaudio or alsa-utils. Please install them on your system to be able to use this application.
 
 # Define audio backend

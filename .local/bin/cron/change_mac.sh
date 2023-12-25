@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 interface="wlan0"  # Reemplaza "eth0" con el nombre de tu interfaz de red
 
 # Genera una nueva dirección MAC aleatoria

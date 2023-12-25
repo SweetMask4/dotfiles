@@ -1,0 +1,294 @@
+"---Blogs---"
+http://www.archlinux.org/feeds/news/ "Blogs" "Linux"
+http://www.linuxjournal.com/node/feed "Blogs" "Linux"
+https://f-droid.org/feed.xml "Blogs" "Android"
+https://opensource.com/feed "Blogs"
+https://www.zdnet.com/topic/linux/rss.xml "Blogs" "Linux"
+http://feeds.feedburner.com/d0od "Blogs" "Linux"
+https://www.networkworld.com/category/linux/index.rss "Blogs" "Linux"
+https://www.techrepublic.com/rssfeeds/topic/open-source/ "Blogs" "Linux"
+https://smartphone-attack-vector.de/feed/ "Blogs" "Linux"
+http://buggedplanet.info/index.php?title=Special:RecentChanges&feed=atom "Blogs" "Linux"
+https://www.electrospaces.net/feeds/posts/default "Blogs"
+https://blog.bugswriter.com/atom.xml "Blogs" "Linux"
+http://www.muylinux.com/feed/ "Blogs" "Linux"
+http://feeds.feedburner.com/UsemosLinux "Blogs" "Linux"
+https://switchedtolinux.com/tutorials?format=feed&type=rss "Blogs" "Linux"
+https://switchedtolinux.com/news?format=feed&type=rss "Blogs" "Linux"
+https://switchedtolinux.com/linux/distros?format=feed&type=rss "Blogs" "Linux"
+https://switchedtolinux.com/linux/software/?format=feed&type=rss "Blogs" "Linux"
+https://switchedtolinux.com/linux/desktop-environments/?format=feed&type=rss "Blogs"
+https://tynan.com/feed/ "Blogs" "Linux"
+https://opensourcemusings.com/feed/ "Blogs" "Linux"
+https://www.schneier.com/feed/atom "Blogs" "Linux"
+https://www.devdungeon.com/rss.xml "Blogs" "Linux"
+https://www.muyseguridad.net/feed/ "Blogs" "Linux"
+https://www.xda-developers.com/feed/ "Blogs" "Linux"
+https://diolinux.com.br/rss "Blogs" "Linux"
+http://nephitejnf.xyz/personal/blog/rss.xml "Blogs" "Linux"
+https://blog.mozilla.org/laguaridadefirefox/rss "Blogs"
+
+https://github.com/LukeSmithxyz/voidrice/commits/master.atom "~LARBS dotfiles"
+
+"---Reddit---"
+https://www.reddit.com/r/linux.rss "Reddit"
+https://www.reddit.com/r/commandline.rss "Reddit"
+https://www.reddit.com/r/distrotube.rss "Reddit"
+https://www.reddit.com/r/emacs.rss "Reddit"
+https://www.reddit.com/r/Technology/.rss "Reddit" 
+https://www.reddit.com/r/danklinuxusers/.rss "Reddit"
+https://www.reddit.com/r/unixporn/.rss "Reddit"
+https://www.reddit.com/r/firefox/.rss "Reddit"
+https://www.reddit.com/r/AnimeEspanol/.rss "Reddit"
+https://www.reddit.com/r/LinuxShell/.rss "Reddit"
+https://www.reddit.com/r/linux_programming/ "Reddit"
+https://www.reddit.com/r/LinuxPorn/.rss "Reddit"
+https://www.reddit.com/r/Hispanic/.rss "Reddit"
+
+"---Twitter/x---"
+https://nitter.1d4.us/StarkPrivacy/rss "Twitter"
+https://nitter.1d4.us/elpicalibro/rss "Twitter"
+https://nitter.1d4.us/BAntifraude/rss "Twitter"
+https://nitter.1d4.us/digitalcerebro/rss "Twitter"
+https://nitter.1d4.us/eldiariodedross/rss "Twitter"
+https://nitter.1d4.us/guiafree/rss "Twitter"
+https://nitter.1d4.us/Hispanfilo1/rss "Twitter"
+https://nitter.1d4.us/LOMBARDIBOSCAN/rss "Twitter"
+https://nitter.1d4.us/esteban1492o/rss "Twitter"
+https://nitter.1d4.us/razonmasfe/rss "Twitter"
+https://nitter.1d4.us/ArceYuliano/rss "Twitter"
+https://nitter.1d4.us/angellombardi/rss "Twitter"
+https://nitter.1d4.us/ASuicideBoy/rss "Twitter"
+https://nitter.1d4.us/Ma_WuKong/rss "Twitter"
+https://nitter.1d4.us/R_CathPR/rss "Twitter"
+https://nitter.1d4.us/armesillaconde/rss "Twitter"
+https://nitter.1d4.us/geoestratego/rss "Twitter"
+
+"---News---"
+https://actualidad.rt.com/feeds/all.rss "News"
+https://noticiasholisticas.com.ar/feed/ "News"
+https://www.elviejotopo.com/feed/ "News"
+https://elcaso.elnacional.cat/uploads/feeds/feed_elcaso_ca.xml "News"
+https://www.levante-emv.com/rss/section/4548/ "News"
+https://eldecanodeguadalajara.com/rss.php?type=news "News"
+https://www.farodevigo.es/rss/ "News"
+https://www.laregion.es/rss "News"
+https://www.diariodemallorca.es/rss/section/1616495/ "News"
+https://elcaso.elnacional.cat/uploads/feeds/feed_elcaso_es_41.xml "News"
+https://www.diariosur.es/rss/2.0/?section=sucesos "News"
+https://www.ultimahora.es/sucesos/ultimas.rss "News"
+http://www.heise.de/newsticker/heise.rdf "Technology"
+https://somoskudasai.com/rss "Anime" "News"
+https://es.aleteia.org/feed "Religion" "News"
+https://alertamundialnoticias.com/feed "News"
+https://www.vozpopuli.com/feed "News"
+https://psicovivirinternacional.com/psicovivir-news/rss "Psychology" "News"
+https://www.academiadecine.com/rss "Movies" "News"
+https://librosobrelibro.com/actualidad/rss "News" "Literature"
+https://ideas.gaceta.es/rss "News"
+https://www.20minutos.es/rss/ "News"
+https://hechoscriollos.com.ve/rss "News"
+https://www.defensa.com/rss/ "News" "War"
+https://informeorwell.com/rss "News"
+https://www.infocatolica.com/atom.php "News" "Religio"
+
+"---Technology---"
+https://www.3djuegos.com/feedburner.xml "News" "Gaming" "Technology"
+http://feeds.weblogssl.com/xataka2 "Technology"
+http://es.gizmodo.com/rss "Technology"
+http://blog.system76.com/rss "Technology" "Linux"
+http://feeds.feedburner.com/Andro4allcom "Technology" "Android"
+http://www.genbeta.com/index.xml "Technology"
+http://linuxtoday.com/backend/biglt.rss "Technology" "Linux"
+http://linuxadictos.com/feed/ "Technology" "Linux"
+http://www.linuxhispano.net/feed/ "Technology" "Linux"
+http://distrowatch.com/news/dw.xml "Technology" "Linux"
+http://www.genbeta.com/categoria/linux/rss2.xml "Technology" "Linux"
+http://salmorejogeek.com/feed/ "Technology"
+http://alt1040.com/feed/ "Technology"
+http://news.ycombinator.com/rss "Technology" "Hacknew"
+http://feeds.feedburner.com/Androidsis "Technology" "Android"
+http://www.muycomputer.com/feed "Technology"
+http://feeds.feedburner.com/MovilZona "Technology"
+http://feeds.feedburner.com/adslzone "Technology"
+http://www.theverge.com/rss/full.xml "Technology"
+https://www.linuxtoday.com/feed/ "Technology" "Linux"
+https://www.elcomercio.es/rss/atom/?section=vivir/tecnologia "Technology"
+http://lifehacker.com/rss "Technology"
+https://www.gamingonlinux.com/article_rss.php "Technology"
+https://hackaday.com/blog/feed/ "Technology"
+https://www.phoronix.com/rss.php "Technology"
+https://www.computerworld.com/index.rss "Technology"
+https://betanews.com/feed "Technology"
+https://arstechnica.com/rss "Technology"
+https://lwn.net/headlines/newrss "Linux" "Technology"
+https://itsfoss.com/es/rss/ "Blogs" "Linux"
+
+
+"---Youtube---"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCJdmdUp5BrsWsYVQUylCMLg "youtube" "Technology" # Erik Dubois Arcolinux
+https://www.youtube.com/feeds/videos.xml?channel_id=UCgHXvTpaNOBCIDqCNhOxPkg "youtube" "Technology" # Karlas Project Linux
+https://www.youtube.com/feeds/videos.xml?channel_id=UCWxUfCyAMgs2dZO_oRkQPog "youtube" "Technology" # Zatiel Linux
+https://www.youtube.com/feeds/videos.xml?channel_id=UCq1jZXZJ3ULECQ9CntnNXhA "youtube" "Technology" # SalmorejoGeek Linux
+https://www.youtube.com/feeds/videos.xml?channel_id=UCDCYAAuADe_GntTBEDPAXtQ "youtube" "Technology" # LinuxeroErrante JuanJJ
+https://www.youtube.com/feeds/videos.xml?channel_id=UC3cQA-iGSLflP8879xHcwTA "youtube" "Technology" # Eduardo Medina
+https://www.youtube.com/feeds/videos.xml?channel_id=UCzrFWz6KrJy-VOz6D7EoT4w "youtube" "Technology" # La Chica de Sistemas
+https://www.youtube.com/feeds/videos.xml?channel_id=UCl8XUDjAOLc7GNKcDp9Nepg "youtube" "Technology" # Locos por linux
+https://www.youtube.com/feeds/videos.xml?channel_id=UCtV2Zv7h-5RCW_Dou5JJDIg "youtube" "Technology" # rikerlinuxtips
+https://www.youtube.com/feeds/videos.xml?channel_id=UCwsRITYlQftMPezSJ8xlPWg "youtube" "Technology" # privacymap
+https://www.youtube.com/feeds/videos.xml?channel_id=UC0seCZdnZZByQZP1Lx8oL2A "youtube" "Technology" # rikerlinux
+https://www.youtube.com/feeds/videos.xml?channel_id=UCEf5U1dB5a2e2S-XUlnhxSA "youtube" "Technology" # Diolinux
+https://www.youtube.com/feeds/videos.xml?channel_id=UC629vKGFPRc1rz6VDm6OZiQ "youtube" "Technology" # DiolinuxLabs
+https://www.youtube.com/feeds/videos.xml?channel_id=UClz3DneoYlccluy4hBlx86Q "youtube" "Technology" # Slackjeff
+https://www.youtube.com/feeds/videos.xml?channel_id=UCd2FHKnQ3ymrNhdsV9J0VmA "youtube" "Technology" # Vegadata
+https://www.youtube.com/feeds/videos.xml?user=naseros "youtube" "Technology" # Naseros Redes spain
+https://www.youtube.com/feeds/videos.xml?channel_id=UCWJUSpXVHTaHErtGWC5qPlQ "youtube" "Technology" # destination linux news
+https://www.youtube.com/feeds/videos.xml?channel_id=UCrBzBOMcUVV8ryyAU_c6P5g "youtube" "Technology" # PeladoNerd 
+https://www.youtube.com/feeds/videos.xml?channel_id=UCNHWpNqiM8yOQcHXtsluD7Q "youtube" "Technology" #  s4vitar hacketical 
+https://www.youtube.com/feeds/videos.xml?channel_id=UCgzsRmCl4BU-QmSVC4jFOlg "youtube" "Technology" #  s4vitar onlive Directos 
+https://www.youtube.com/feeds/videos.xml?channel_id=UC5KDiSAFxrDWhmysBcNqtMA "youtube" "Technology" # Eric Murphy linux 
+https://www.youtube.com/feeds/videos.xml?user=sunknudsen "youtube" "Technology" # sunknudsen Privacy Security Research
+https://www.youtube.com/feeds/videos.xml?channel_id=UCSuHzQ3GrHSzoBbwrIq3LLA "youtube" "Technology" # naomi broackwell security
+https://www.youtube.com/feeds/videos.xml?channel_id=UCs6KfncB4OV6Vug4o_bzijg "youtube" "Technology" # techlore privacy 
+https://www.youtube.com/feeds/videos.xml?channel_id=UC0W_BIuwk8D0Bv4THbVZZOQ "youtube" "Technology" # surveilance report 
+https://www.youtube.com/feeds/videos.xml?channel_id=UCH5DsMZAgdx5Fkk9wwMNwCA "youtube" "Technology" # new oil 
+https://www.youtube.com/feeds/videos.xml?channel_id=UCOWcZ6Wicl-1N34H0zZe38w "youtube" "Technology" # level1linux 
+https://www.youtube.com/feeds/videos.xml?channel_id=UCvFGf8HZGZWFzpcDCqb3Lhw "youtube" "Technology" # all things secure 
+https://www.youtube.com/feeds/videos.xml?channel_id=UC2bkdAPR47c7FkvwSXzzMzQ "youtube" "Technology" # nicemicro 
+https://www.youtube.com/feeds/videos.xml?channel_id=UC3Ea_Con1qeRI_5HZG_4rFQ "youtube" "Technology" # compusiast gentoo 
+https://www.youtube.com/feeds/videos.xml?channel_id=UCR4W7Mq0HD8JoW9KBRm0mZg "youtube" "Technology" # immolo gentoo 
+https://www.youtube.com/feeds/videos.xml?channel_id=UCnhDCF3Slf9MlmYGIr47y-g "youtube" "Technology" # linuxtechgeek gentoo 
+https://www.youtube.com/feeds/videos.xml?channel_id=UCMiyV_Ib77XLpzHPQH_q0qQ "youtube" "Technology" # Veronica Explains
+https://www.youtube.com/feeds/videos.xml?channel_id=UCVls1GmFKf6WlTraIb_IaJg "youtube" "Technology" # Distrotube linux 
+https://www.youtube.com/feeds/videos.xml?channel_id=UCURRdjIBFE8TDJlPOuiob3Q "youtube" "Technology" # AdamantIT hardware Repair 
+https://www.youtube.com/feeds/videos.xml?channel_id=UCYVU6rModlGxvJbszCclGGw "youtube" "Technology" # Rob Braxman Tech
+https://www.youtube.com/feeds/videos.xml?channel_id=UCOk-gHyjcWZNj3Br4oxwh0A "youtube" "Technology" # TechnoTim 
+https://www.youtube.com/feeds/videos.xml?channel_id=UCEv-LBP68lHl3JNJ25RT16g "youtube" "Technology" # Technotim Talks 
+https://www.youtube.com/feeds/videos.xml?channel_id=UCP7WmQ_U4GB3K51Od9QvM0w "youtube" "Technology" # davidbombal
+https://www.youtube.com/feeds/videos.xml?channel_id=UC9x0AN7BWHpCDHSm9NiJFJQ "youtube" "Technology" # networkchuck 
+https://www.youtube.com/feeds/videos.xml?channel_id=UCf8uu3IE42b6hRUusufEH8g "youtube" "Technology" # akamaidev
+https://www.youtube.com/feeds/videos.xml?channel_id=UCxQKHvKbmSzGMvUrVtJYnUA "youtube" "Technology" # learnlinuxtv
+https://www.youtube.com/feeds/videos.xml?channel_id=UCjSEJkpGbcZhvo0lr-44X_w "youtube" "Technology" # techhut 
+https://www.youtube.com/feeds/videos.xml?channel_id=UCR-DXc1voovS8nhAvccRZhg "youtube" "Technology" # Jeff Geerling 
+https://www.youtube.com/feeds/videos.xml?channel_id=UCtYg149E_wUGVmjGz-TgyNA "youtube" "Technology" # Titus Tech Talk 
+https://www.youtube.com/feeds/videos.xml?channel_id=UCg6gPGh8HU2U01vaFCAsvmQ "youtube" "Technology" # Chris Titus Tech 
+https://www.youtube.com/feeds/videos.xml?channel_id=UCS97tchJDq17Qms3cux8wcA "youtube" "Technology" # chris machine nvim 
+https://www.youtube.com/feeds/videos.xml?channel_id=UCNvl_86ygZXRuXjxbONI5jA "youtube" "Technology" # 10leej LinuxGentoo 
+https://www.youtube.com/feeds/videos.xml?channel_id=UCmw-QGOHbHA5cDAvwwqUTKQ "youtube" "Technology" # zaney Linux 
+https://www.youtube.com/feeds/videos.xml?channel_id=UCylGUf9BvQooEFjgdNudoQg "youtube" "Technology" # The Linux Cast Matt 
+https://www.youtube.com/feeds/videos.xml?channel_id=UCBq5p-xOla8xhnrbhu8AIAg "youtube" "Technology" # Robertson Tech over Tea 
+https://www.youtube.com/feeds/videos.xml?channel_id=UCoryWpk4QVYKFCJul9KBdyw "youtube" "Technology" # SwitchedtoLinux 
+https://www.youtube.com/feeds/videos.xml?channel_id=UCgkG68BiCngkoV7I2BLtAVg "youtube" "Technology" # Devdungeon 
+https://www.youtube.com/feeds/videos.xml?channel_id=UC2eYFnH61tmytImy1mTYvhA "youtube" "Technology" # Luke Smith 
+https://www.youtube.com/feeds/videos.xml?channel_id=UC7YOGHUfC1Tb6E4pudI9STA "youtube" "Technology" # Mental Outlaw 
+https://www.youtube.com/feeds/videos.xml?channel_id=UCld68syR8Wi-GY_n4CaoJGA "youtube" "Technology" # Brodie Robertson 
+https://www.youtube.com/feeds/videos.xml?channel_id=UC_qspxIbv_iMtfg7rJfbyOg "youtube" "Technology" # Japatonic 
+
+https://www.youtube.com/feeds/videos.xml?channel_id=UC5U7mHlhP6s6478wd7ZvnhA "youtube" "Technology" # Trafotin 
+https://www.youtube.com/feeds/videos.xml?channel_id=UCjr2bPAyPV7t35MvcgT3W8Q "youtube" "Technology" # The Hated One 
+https://www.youtube.com/feeds/videos.xml?channel_id=UC5UAwBUum7CPN5buc-_N1Fw "youtube" "Technology" # The Linux Experiment france
+https://www.youtube.com/feeds/videos.xml?channel_id=UCP2bshADPrVMoNrdJvZEQzw "youtube" "Technology" # KeepItTechie
+https://www.youtube.com/feeds/videos.xml?channel_id=UC0A3ldncnGQ1M_RU2Wb4L2A "youtube" "Technology" # quizup 
+https://www.youtube.com/feeds/videos.xml?channel_id=UCFzGyNKXPAglNq28qWYTDFA "youtube" "Technology" # kai hendry 
+https://www.youtube.com/feeds/videos.xml?channel_id=UC36xmz34q02JYaZYKrMwXng "youtube" "Technology" # nate gentine 
+https://www.youtube.com/feeds/videos.xml?channel_id=UC9Tn-atYOt8qZP-oqui7bhw "youtube" "Technology" # techcityyes au
+https://www.youtube.com/feeds/videos.xml?channel_id=UCv85NiROLKddHa0fBATwTzw "youtube" "Technology" # victorroblesweb 
+https://www.youtube.com/feeds/videos.xml?channel_id=UCsmEAwbV7WbYndpQKbY4Ntw "youtube" "Technology" # juanvillalvazo 
+https://www.youtube.com/feeds/videos.xml?channel_id=UCxPD7bsocoAMq8Dj18kmGyQ "youtube" "Technology" # mouredev 
+https://www.youtube.com/feeds/videos.xml?channel_id=UCSLIvjWJwLRQze9Pn4cectQ "youtube" "Technology" # foovarserverless
+https://www.youtube.com/feeds/videos.xml?channel_id=UC8LeXCWOalN8SxlrPcG-PaQ "youtube" "Technology" # midudev
+https://www.youtube.com/feeds/videos.xml?channel_id=UCz0EXCSvMwYKruljsZjCOzw "youtube" "Technology" # todocode 
+https://www.youtube.com/feeds/videos.xml?channel_id=UC8butISFwT-Wl7EV0hUK0BQ "youtube" "Technology" # freecodecamp 
+https://www.youtube.com/feeds/videos.xml?channel_id=UCLXRGxAzeaLDGaOphqapzmg "youtube" "Technology" # codigofacilito
+https://www.youtube.com/feeds/videos.xml?channel_id=UC55-mxUj5Nj3niXFReG44OQ "youtube" "Technology" # platzi
+https://www.youtube.com/feeds/videos.xml?channel_id=UCX9NJ471o7Wie1DQe94RVIg "youtube" "Technology" # fatz 
+https://www.youtube.com/feeds/videos.xml?channel_id=UCCvaRcYdZCZBrBQVnsUBg5Q "youtube" "Technology" # gonzi programacion
+https://www.youtube.com/feeds/videos.xml?channel_id=UCAsew8TckB-GMy9Cmfu6nqw "youtube" "Technology" # Matias Baldanza 
+https://www.youtube.com/feeds/videos.xml?channel_id=UCgZoKiTvvpEnr1zI6Kv_i7A "youtube" "Technology" # manzdev 
+https://www.youtube.com/feeds/videos.xml?channel_id=UCBHn7QnCYmZ0jqizMfkcCkA "youtube" "Technology" # minipoxd 
+https://www.youtube.com/feeds/videos.xml?channel_id=UCSNoSLtVvsfb-IhsDfmZxdw "youtube" "Philosophy" "Movies" # Filosofia de pelicula
+https://www.youtube.com/feeds/videos.xml?channel_id=UC9-y-6csu5WGm29I7JiwpnA "youtube" "Technology" # Computerphile
+https://www.youtube.com/feeds/videos.xml?channel_id=UCQIoDiWFwTDbxWmosEhQxSg "youtube" "Philosophy" "Movies" #  Filosofía Clase B
+https://www.youtube.com/feeds/videos.xml?channel_id=UCBBxEha00AVZarL8iNyujBg "youtube" "Philosophy" #  El Picalibro
+ttps://www.youtube.com/feeds/videos.xml?channel_id=UCvCTcvKJJZGzYvX86OLgS5A "youtube" "Philosophy" #  Capitan Cultura
+https://www.youtube.com/feeds/videos.xml?channel_id=UCOR4rzdclrVT33pkUr8deqA "youtube" "Philosophy" #  El Picalibro Live: News, Reaccciones y RC
+https://www.youtube.com/feeds/videos.xml?channel_id=UCNYW2vfGrUE6R5mIJYzkRyQ  "youtube" "Terror" # DrossRotzank 
+https://www.youtube.com/feeds/videos.xml?channel_id=UC8ootkKAbJC9bABoRcQf0Kw  "youtube" "Technology" # TuTecnoMundo - Android, news, and gadgets
+https://www.youtube.com/feeds/videos.xml?channel_id=UCaEj85X5SjXoDtvJpc3SxLg  "youtube" "Philosophy" #  Jonathan Ramos
+https://www.youtube.com/feeds/videos.xml?channel_id=UC2811Z3E4b7E5G57RHxF37w  "youtube" "Anime" # Umaru-chan 
+https://www.youtube.com/feeds/videos.xml?channel_id=UCeHdTQHUkreQE2X_oUZqJSg  "youtube" "Hispanismo" #  Brigada Antifraude
+https://www.youtube.com/feeds/videos.xml?channel_id=UCmrV9wktGkRar8hLpQvTNsQ  "youtube" "Linux" #  Linux criollo
+https://www.youtube.com/feeds/videos.xml?channel_id=UCWhKWA_zR6c-H1c4kcGj6KQ  "youtube" "Hack" # BorjaGalisteo 
+https://www.youtube.com/feeds/videos.xml?channel_id=UC0yO2bryQIEVMffscIS5ZfA  "youtube" "Divulgation" # Aristarchus X 
+https://www.youtube.com/feeds/videos.xml?channel_id=UC9H0HzpKf5JlazkADWnW1Jw  "youtube" "Linux" # bashbunni
+https://www.youtube.com/feeds/videos.xml?channel_id=UCLzgGM7q2bXebJUs7cymdhg  "youtube" "War" # Cosas Militares 
+https://www.youtube.com/feeds/videos.xml?channel_id=UCuKikJ8ZIUPMiiUxf7uu6KQ  "youtube" "Linux" # Código Cristo
+https://www.youtube.com/feeds/videos.xml?channel_id=UCR3OEVNfhx8_5_sqJWrPQbg  "youtube" "Anime" #  Dart tv
+https://www.youtube.com/feeds/videos.xml?channel_id=UCQX_MZRCaluNKxkywkLEgfA  "youtube" "Science" # Date un Vlog
+https://www.youtube.com/feeds/videos.xml?channel_id=UCns-8DssCBba7M4nu7wk7Aw  "youtube" "Science" # Date un Voltio
+https://www.youtube.com/feeds/videos.xml?channel_id=UCxGgQhryT47LYlRswnQ41bg  "youtube" "Politics" # DEVOLUCIONARIOS
+https://www.youtube.com/feeds/videos.xml?channel_id=UCFYqNfxE5JWNeYuZuaM4YNQ  "youtube" "Politics" # Santiago Armesilla
+https://www.youtube.com/feeds/videos.xml?channel_id=UCechBw_tbRenJSIoEbbw8WA  "youtube" "Anime" # sekkyoku
+https://www.youtube.com/feeds/videos.xml?channel_id=UCEQXxiYxNZbym9Fad7-n2Lg  "youtube" "Science" # Doctor Fisión
+https://www.youtube.com/feeds/videos.xml?channel_id=UCy5znSnfMsDwaLlROnZ7Qbg  "youtube" "Technology" # Dot CSV 
+https://www.youtube.com/feeds/videos.xml?channel_id=UC6aFXk7P_lsW7WpCo6tkBqQ  "youtube" "Technology" # efoxxfiles
+https://www.youtube.com/feeds/videos.xml?channel_id=UC9WpDc3u_3-Q3o0cLZGbjhg  "youtube" "Documentaries" # El Gentilhombre
+https://www.youtube.com/feeds/videos.xml?channel_id=UCBYyJBCtCvgqA4NwtoPMwpQ  "youtube" "Podcast" # The Wild Project
+https://www.youtube.com/feeds/videos.xml?channel_id=UCDZsyOkn-WTiTwgAvZSQ_cg  "youtube" # El Rincón De Giorgio
+https://www.youtube.com/feeds/videos.xml?channel_id=UCRrMRC98kYNprn1modRn4jg  "youtube" "Literature" #  El sur, taller literario y algo más
+https://www.youtube.com/feeds/videos.xml?channel_id=UCzLjjRlkOosxt0eQamPyhlA  "youtube" "Linux" # Nephitejnf
+https://www.youtube.com/feeds/videos.xml?channel_id=UCZagoENurE9r5TRlHvFRqdg  "youtube" "Documentaries" # ElDiaQue 
+https://www.youtube.com/feeds/videos.xml?channel_id=UCGXLhvXxNVBd-G4q9K7Q6pw  "youtube" "Geeks" "Anime" # Elth Tales
+https://www.youtube.com/feeds/videos.xml?channel_id=UCf_MY8uWjWH8gwzFK6vCAmg  "youtube" "Divulgation" # Esquizofrenia Natural 
+https://www.youtube.com/feeds/videos.xml?channel_id=UCb8GKeOvI7WsFUkB4UVAeXA  "youtube" "Divulgation" # Cordura Artificial
+https://www.youtube.com/feeds/videos.xml?channel_id=UChojFzThpgObGHmdMS1rpvA  "youtube" "Divulgation" # Fernando Díaz Villanueva 
+https://www.youtube.com/feeds/videos.xml?channel_id=UCBgi-68fpmF6yIEDOqd4kPw  "youtube" "Philosophy" # Adictos a la Filosofía 
+https://www.youtube.com/feeds/videos.xml?channel_id=UCJetJ7nDNLlEzDLXv7KIo0w  "youtube" "Linux" # Gavin Freeborn 
+https://www.youtube.com/feeds/videos.xml?channel_id=UCjeOy_cLaY-dxs82t20YY-g  "youtube" "Divulgation" # Adrián Díaz 李安
+https://www.youtube.com/feeds/videos.xml?channel_id=UCngn7SVujlvskHRvRKc1cTw  "youtube" "Linux" #  BugsWriter
+https://www.youtube.com/feeds/videos.xml?channel_id=UC4FHiPgS1KXkUMx3dxBUtPg  "youtube" "Technology" # HolaMundo
+https://www.youtube.com/feeds/videos.xml?channel_id=UCbQD_PmkggiX6DubtDdwmqA  "youtube" "Anime" # iLuTV
+https://www.youtube.com/feeds/videos.xml?channel_id=UCNj6EwTXX2NDg0foC0ubjxw  "youtube" "Android" # JanDroiZ
+https://www.youtube.com/feeds/videos.xml?channel_id=UCl2mFZoRqjw_ELax4Yisf6w  "youtube" "Privacy" # Louis Rossmann 
+https://www.youtube.com/feeds/videos.xml?channel_id=UCVflB5V9W7qWWZnwelyOZ3g  "youtube" "Philosophy" # MARTE 19 
+https://www.youtube.com/feeds/videos.xml?channel_id=UC5TawXio93r576Rl0UglVDg  "youtube" "Psychology" # Mente Humana 
+https://www.youtube.com/feeds/videos.xml?channel_id=UC-qOy02aIifNhM6eHMgZeuQ  "youtube" "Redes" # ProfeSantiago  
+https://www.youtube.com/feeds/videos.xml?channel_id=UC7aUZQsKt9EsdTFanE_ORcg  "youtube" "Philosophy" # Ram Talks 
+https://www.youtube.com/feeds/videos.xml?channel_id=UC2RjsluFeONfcAt4-Ils29A  "youtube" "Philosophy" # Resumenes Entelekia
+https://www.youtube.com/feeds/videos.xml?channel_id=UCtoo4_P6ilCj7jwa4FmA5lQ  "youtube" "Technology" # Soy Dalto
+https://www.youtube.com/feeds/videos.xml?channel_id=UC66soxYX4IBUF4V94EdyYBQ  "youtube" "Movies" # ZEPfilms
+https://www.youtube.com/feeds/videos.xml?channel_id=UCsnGwSIHyoYN0kiINAGUKxg  "youtube" "Linux" "Technology" # Wolfgang's Channel 
+https://www.youtube.com/feeds/videos.xml?channel_id=UCAvjCJ_n_yve8E_CKrgaFHQ  "youtube" "Linux" "Hispanismo" # Venezuela Provincial
+https://www.youtube.com/feeds/videos.xml?channel_id=UClh9mrZULUGRQf-2oqPnPaw  "youtube" "Linux" "Technology" # TheWizWiki
+https://www.youtube.com/feeds/videos.xml?channel_id=UCPF-oYb2-xN5FbCXy0167Gg  "youtube" "Linux" "Technology" # Roel Van de Paar
+https://www.youtube.com/feeds/videos.xml?channel_id=UC1h0yDawct42gLAeAckeDTg  "youtube" "Linux" "Technology" # Manuel Cabrera Caballero
+https://www.youtube.com/feeds/videos.xml?channel_id=UCGy50em_MTR0uTo1wxwSmQQ  "youtube" "Terror" # IvanG Reviews
+https://www.youtube.com/feeds/videos.xml?channel_id=UCnreKfR5Y1vq-4GJJFVNgBQ  "youtube" "Android" # Androidsis - Reviews, apps y juegos Android
+https://www.youtube.com/feeds/videos.xml?channel_id=UCu0IAG3rSKnIkdOw5Xk1UTQ  "youtube" "Divulgation" # Sapientiae Libertas
+https://www.youtube.com/feeds/videos.xml?channel_id=UCffvdhj3nA0s2uN3NoWDQFA  "youtube" "Movies" # Agujeros de Guion
+https://www.youtube.com/feeds/videos.xml?channel_id=UCQU5lKXr22qWByH0WEpZtCg  "youtube" "Technology" # Alpha Developer
+https://www.youtube.com/feeds/videos.xml?channel_id=UCmrLCXSDScliR7q8AxxjvXg  "youtube" "Politics" # Black Pigeon Speaks  Black Pigeon Speaks
+https://www.youtube.com/feeds/videos.xml?channel_id=UCgHCCxCrxQRUqyzj8EvKEtg  "youtube" "History" #  El trastero de la historia
+https://www.youtube.com/feeds/videos.xml?channel_id=UCtCuk2evpLat7Y-Hx6HCDqQ  "youtube" "Music" #  HBD - Detodoy Rap
+https://www.youtube.com/feeds/videos.xml?channel_id=UC5vOa0IDvjQP9UCipLonVxA  "youtube" "Literature" # El Rincón de las Palabras
+https://www.youtube.com/feeds/videos.xml?channel_id=UC4w1YQAJMWOz4qtxinq55LQ  "youtube" "Technology" # Level1Techs
+https://www.youtube.com/feeds/videos.xml?channel_id=UCNnUnr4gwyNmzx_Bbzvt29g  "youtube" "Linux" # LinuxScoop
+https://www.youtube.com/feeds/videos.xml?channel_id=UCKK25Prf-UD9Qak0W1d02KQ  "youtube" "Psychology" # Psico Vlog
+https://www.youtube.com/feeds/videos.xml?channel_id=UCNpLEIvi0tZClD-pSFlk4xg  "youtube" "Psychology" # PsychoEasy
+https://www.youtube.com/feeds/videos.xml?channel_id=UCL0bN6THhHVBwRPsXKOhAHg  "youtube" "Fun" # Chingu amiga
+https://www.youtube.com/feeds/videos.xml?channel_id=UCcMbGtY3R8GZHpOkvpn0kVg  "youtube" "Religion" # Santiago Alarcón
+https://www.youtube.com/feeds/videos.xml?channel_id=UCmb0LnmFYceH7toqgmUTJDA  "youtube" "Gaming" # Vandal 
+https://www.youtube.com/feeds/videos.xml?channel_id=UCTpSDUGtQVFhjA3ohSlzalQ  "youtube" "Philosophy" # Waldo KG 
+https://www.youtube.com/feeds/videos.xml?channel_id=UCBq5p-xOla8xhnrbhu8AIAg  "youtube" "Technology" # Tech Over Tea
+https://www.youtube.com/feeds/videos.xml?channel_id=UCAiiOTio8Yu69c3XnR7nQBQ  "youtube" "Technology" # System Crafters
+https://www.youtube.com/feeds/videos.xml?channel_id=UCak7CyvTwRhkf_n38y53lkQ  "youtube" "Religion" # Ecumenicas1
+https://www.youtube.com/feeds/videos.xml?channel_id=UCUGfBZ3WiiqCc_UfcF_RrRA  "youtube" "Travel" # Jabiertzo
+https://www.youtube.com/feeds/videos.xml?channel_id=UC8WwqW8uW2X6ys3PWMiDSzg  "youtube" "News" # Los Liberales 🗽por Nicolás Morás
+https://www.youtube.com/feeds/videos.xml?channel_id=UCwd8Byi93KbnsYmCcKLExvQ  "youtube" "News" # Negocios TV
+https://www.youtube.com/feeds/videos.xml?channel_id=UC87pOWXZVxukr0V7RR1CMpw  "youtube" "Resistance" # Lobo Estepario Difusión
+https://www.youtube.com/feeds/videos.xml?channel_id=UCFzreJxOr4nbvfeFoipzjew  "youtube" "Resistance" # Cristina Martin Jimenez 
+https://www.youtube.com/feeds/videos.xml?channel_id=UCQvkda3QeQcLoAx_E2AokVg  "youtube" "History" #  La Nueva Enciclopedia
+https://www.youtube.com/feeds/videos.xml?channel_id=UCzQUP1qoWDoEbmsQxvdjxgQ  "youtube" "Divulgation" # PowerfulJRE
+https://www.youtube.com/feeds/videos.xml?channel_id=UCuWeBHxVe6C69JTBpiY-Y8Q  "youtube" "Fun" # DELCARAJO TV
+https://www.youtube.com/feeds/videos.xml?channel_id=UCSS7tKTxrtZp35DaoCIe0rQ  "youtube" "Technology" # ABC TV & iview
+https://www.youtube.com/feeds/videos.xml?channel_id=UCBTfn-GwCKRqNaWKNzxqlyQ  "youtube" "Resistance" # ElOtroPlanoTV

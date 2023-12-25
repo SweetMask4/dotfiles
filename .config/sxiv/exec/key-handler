@@ -14,13 +14,13 @@
 
 rotate() {
     degree="$1"
-    tr '\n' '\0' | xargs -0 realpath | sort | uniq | while read file; do
-	case "$(file -b -i "$file")" in
-	    image/jpeg*)
-		jpegtran -rotate "$degree" -copy all -outfile "$file" "$file"
-	    ;;
-	    *)
-		mogrify  -rotate "$degree" "$file" ;;
+    tr '\n' '\0' | xargs -0 realpath | sort | uniq | while read -r file; do
+        case "$(file -b -i "$file")" in
+            image/jpeg*)
+                jpegtran -rotate "$degree" -copy all -outfile "$file" "$file"
+                ;;
+            *)
+                mogrify  -rotate "$degree" "$file" ;;
         esac
     done
 }
@@ -30,43 +30,43 @@ check_gimp() {
     notify-send "ERROR" "Gimp must be installed in order to use this function." && exit 1 ;
 }
 
-while read file
+while read -r file
 do
     case "$1" in
-        "c") 
+        "c")
             xclip -selection clipboard -target image/png "$file" &&
             notify-send "$file has been copied to clipboard." && exit 0
-        ;;
+            ;;
         "d")
-            [ "$(printf "No\\nYes" | dmenu -i -p "Really delete $file?")" = "Yes" ] && 
+            [ "$(printf "No\\nYes" | dmenu -i -p "Really delete $file?")" = "Yes" ] &&
             rm "$file" && notify-send "$file deleted."
-        ;;
+            ;;
         "g")
             pacman -Qq "gimpr" >/dev/null 2>&1 && gimp "$file" ||
-            notify-send "ERROR" "\nGimp is not installed! Install gimp if you want to use this function in sxiv:\n\nsudo pacman -S gimp" && 
+            notify-send "ERROR" "\nGimp is not installed! Install gimp if you want to use this function in sxiv:\n\nsudo pacman -S gimp" &&
             exit 1;
-        ;;
+            ;;
         "i")
             notify-send "File information" \
-            "$(mediainfo "$file" | tr -s ' ' | grep -v CompleteName_Last)"
-        ;;
-        "x") 
+                "$(mediainfo "$file" | tr -s ' ' | grep -v CompleteName_Last)"
+            ;;
+        "x")
             xwallpaper --stretch "$file" &&
             filename=$HOME/.config/wall
-            if [ ! -f $filename ]; then
-                touch $filename
+            if [ ! -f "$filename" ]; then
+                touch "$filename"
             fi
-            echo "$file" > $HOME/.config/wall &&
+            echo "$file" > "$HOME"/.config/wall &&
             notify-send "$file has been set as your wallpaper." && exit 0
-        ;;
+            ;;
         "7")
             rotate 270
-        ;;
+            ;;
         "8")
             rotate 180
-        ;;
+            ;;
         "9")
             rotate 90
-        ;;
-        esac
+            ;;
+    esac
 done
