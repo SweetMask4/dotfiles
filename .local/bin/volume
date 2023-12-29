@@ -1,32 +1,13 @@
 #!/bin/sh
-# The dependencies are pulseaudio or alsa-utils. Please install them on your system to be able to use this application.
-
-# Define audio backend
-if command -v pulseaudio >/dev/null 2>&1; then
-    audio_backend="pulseaudio"
-elif command -v amixer >/dev/null 2>&1; then
-    audio_backend="alsa"
-else
-    echo "no pulseaudio or alsa installed"
-    exit 1
-fi
 
 # Check if audio is muted
 is_muted() {
-    if [ "$audio_backend" = "pulseaudio" ]; then
-        pactl list sinks | awk '/^[[:space:]]Mute:/ {print $2}' | head -n 1
-    else
-        amixer -D default get Master | grep -oE '[0-9]{1,3}%' | tail -n 1 | tr -d '%'
-    fi
+    pactl list sinks | awk '/^[[:space:]]Mute:/ {print $2}' | head -n 1
 }
 
 # Get current volume
 get_volume() {
-    if [ "$audio_backend" = "pulseaudio" ]; then
-        pactl list sinks | grep '^[[:space:]]Volume:' | head -n 1 | awk '{print $5}' | sed 's/[%|,]//g'
-    else
-        amixer -D default get Master | grep -oE '[0-9]{1,3}%' | sed 's/%//'
-    fi
+    pactl list sinks | grep '^[[:space:]]Volume:' | head -n 1 | awk '{print $5}' | sed 's/[%|,]//g'
 }
 
 # Send volume notification
@@ -41,43 +22,24 @@ send_notification() {
 # Toggle mute state
 toggle_mute() {
     if [ "$(is_muted)" = "yes" ]; then
-        if [ "$audio_backend" = "pulseaudio" ]; then
-            pactl set-sink-mute @DEFAULT_SINK@ 0
-        else
-            amixer -D default set Master unmute
-        fi
+        pactl set-sink-mute @DEFAULT_SINK@ 0
     else
-        if [ "$audio_backend" = "pulseaudio" ]; then
-            pactl set-sink-mute @DEFAULT_SINK@ 1
-        else
-            amixer -D default set Master mute
-        fi
+        pactl set-sink-mute @DEFAULT_SINK@ 1
     fi
-
     send_notification
 }
 
 # Adjust volume
 adjust_volume() {
-    if [ "$1" = "up" ]; then
-        if [ "$audio_backend" = "pulseaudio" ]; then
-            pactl set-sink-volume @DEFAULT_SINK@ +5%
-        else
-            amixer -D default set Master 5%+
-        fi
-    elif [ "$1" = "down" ]; then
-        if [ "$audio_backend" = "pulseaudio" ]; then
-            pactl set-sink-volume @DEFAULT_SINK@ -5%
-        else
-            amixer -D default set Master 5%-
-        fi
-    elif [ "$1" = "mute" ]; then
-        if [ "$audio_backend" = "pulseaudio" ]; then
-            pactl set-sink-mute @DEFAULT_SINK@ toggle
-        else
-            amixer -D default set Master toggle
-        fi
-    fi
+
+    volumen=$(get_volume)
+    case "$1" in
+        "up") [ "$volumen" != 100 ] && volumen_cons=$((volumen+5)) ;;
+        "down") volumen_cons=$((volumen-5)) ;;
+        "mute") pactl set-sink-mute @DEFAULT_SINK@ toggle ;;
+    esac
+
+    pactl set-sink-volume @DEFAULT_SINK@ "$volumen_cons"%
 
     send_notification
 }

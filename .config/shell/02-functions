@@ -60,6 +60,10 @@ fcd(){
 cd "$(find -type d | fzf)"
 }
 
+fvim(){
+  nvim "$(find -type f | fzf)"
+}
+
 open(){
 xdg-open "$(find -type f | fzf)"
 }
@@ -163,7 +167,7 @@ recording() {
 
 update(){
   paru -Syu --nocombinedupgrade
-  flatpak update
+  flatpak update --noninteractive --assumeyes
 }
 
 # not found

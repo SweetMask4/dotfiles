@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/sh
 
 # Function to show a file using bat if it is installed, otherwise use cat
 batorcat() {

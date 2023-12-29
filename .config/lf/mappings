@@ -11,13 +11,14 @@ map d
 map c
 map e
 map f
+map t
 
 # Archive Mappings
 map az zip
 map at tar
 map ag targz
 map ab targz
-map au unarchive
+map au extract
 
 # Trash Mappings
 map dd trash
@@ -55,6 +56,7 @@ map <c-f> fzf_jump
 
 # Movement
 map gtr cd ~/.local/share/Trash/files
+map gus cd /mnt
 
 map gd cd ~/Documents
 map gD cd ~/Downloads
@@ -63,15 +65,27 @@ map gv. cd ~/Videos
 map gp. cd ~/Pictures
 
 map gw. cd ~/Pictures/wallpapers
-map gww cd ~/Pictures/Screenshots/
-map gwm cd ~/Pictures/Wallpapers/MobileWallpapers
+map gww cd ~/Pictures/screenshots/
+map gwm cd ~/Pictures/phone-pictures/wallpapers-phone
+
+map gs. cd ~/scripts
 
 map gr. cd ~/repos
 map grd cd ~/repos/dotfiles
 map grc cd ~/repos/scripts/
+map gsb cd ~/repos/sweetdwm/
+map gsu cd ~/repos/movi-cli-es/
+map gdt cd ~/repos/suckless/
+
+map gt. cd ~/Documents/books/
+map gt1 cd ~/Documents/backup/
+map gt2 cd ~/Documents/universidad/
+map gt3 cd ~/Documents/
 
 map gc cd ~/.config
 map gl cd ~/.local
+map gdt cd ~/.local/share/
 map gE cd /etc
 map gU. cd /usr
 map gUs cd /usr/share
+map gC cd ~/.local/share/cell

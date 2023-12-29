@@ -1,0 +1,41 @@
+#!/bin/sh
+
+url=$(xclip -o)
+
+[ -z "$url" ] && exit 1
+
+if echo "$url" | grep -q "https*://\S\+\.[A-Za-z]\+\S*" ; then
+
+    case "$url" in
+        *youtube*) rss=$(curl -s "$url" | grep -o 'https://www.youtube.com/feeds/videos.xml?channel_id=[^>]*'  | head -n 1)
+            ;;
+        *) xml=$(curl -s "$url" | grep -Eo "rss.*|index.xml.*" | grep -o 'href=[^>]*' | cut -d\" -f 2 | head -n 1 | sed 's/.*href=//' | tr -d "''")
+
+            case "$xml" in
+                *index*) rss="$url$xml" ;;
+                *) rss=$xml ;;
+            esac
+            ;;
+    esac
+
+    [ -z "$rss" ] && exit 1
+    rssfile="$HOME/.config/newsboat/urls"
+    comment=$(echo "" | dmenu -i -p "Add a comment: ")
+    tags1=$(echo "" | dmenu -i -p "Adds a tag : ")
+    tags2=$(echo "" | dmenu -i -p "Adds another tag : ")
+
+    if grep -q "^$rss$" "$rssfile";
+    then
+        notify-send "You already have this RSS feed."
+    else
+        if [ -n "$tags2" ];
+        then
+            echo "$rss" "\"$tags1\"" "\"$tags2\"" "# $comment" >> "$rssfile" && notify-send "RSS feed added."
+        else
+            echo "$rss" "\"$tags1\"" "# $comment" >> "$rssfile" && notify-send "RSS feed added."
+        fi
+    fi
+
+else
+    notify-send "That doesn't look like a full URL." && exit 1
+fi

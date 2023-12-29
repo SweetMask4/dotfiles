@@ -4,7 +4,7 @@ export VISUAL="$EDITOR"
 
 # Default apps
 export MANPAGER="less"                             # man pages with less
-export BROWSER="librewolf"                         # Default web browser
+export BROWSER="io.gitlab.librewolf-community"     # Default web browser
 export TERMINAL="alacritty"
 
 # Cleaning up home folder
@@ -28,21 +28,29 @@ export SUDO_ASKPASS="$HOME/.local/bin/dmenupass"   # Dmenu-based password prompt
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"   # NPM configuration file
 export WINEPREFIX="$XDG_DATA_HOME/wine"           # Wine prefix directory
 export STARSHIP_CONFIG="$XDG_CONFIG_HOME/starship/starship.toml"   # Starship prompt configuration file
+export ANDROID_SDK_HOME="$XDG_CONFIG_HOME/android"
+export MBSYNCRC="$XDG_CONFIG_HOME/mbsync/config"
+export PYTHONSTARTUP="$XDG_CONFIG_HOME/python/pythonrc"
+export TMUX_TMPDIR="$XDG_RUNTIME_DIR"
+export INPUTRC="$XDG_CONFIG_HOME/shell/inputrc"
 
 # Other program settings
 export XDG_SESSION_TYPE="x11"               # Xorg sessions
 export _JAVA_AWT_WM_NONREPARENTING=1        # Fix for Java applications in dwm
 export AWT_TOOLKIT="MToolkit wmname LG3D"   # May have to install wmname
 export QT_QPA_PLATFORMTHEME="gtk2"          # Have QT use gtk2 theme.
+export LYNX_LSS="$HOME/.config/lynx/lynx.lss"
+export LYNX_CFG="$HOME/.config/lynx/lynx.cfg"
+
 
 # PATH
 typeset -U path PATH
 path=(
-  "$HOME/scripts/"
-  "$HOME/.local/bin"
-  "$HOME/.bin"
-  "$HOME/.local/share/flatpak/exports/bin"
-  "$HOME/Applications" 
-  "$path[@]"
+    "$HOME/scripts/"
+    "$HOME/.local/bin"
+    "$HOME/.bin"
+    "$HOME/.local/share/flatpak/exports/bin"
+    "$HOME/Applications"
+    "$path[@]"
 )
 export PATH

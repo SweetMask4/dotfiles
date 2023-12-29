@@ -4,8 +4,6 @@
 
 # Except for the files and folders we want to track
 !alacritty
-!fish
-!starship
 !htop
 !lf
 !shell
@@ -19,8 +17,6 @@
 !nano
 !nvim
 !picom
-!qutebrowser
-!yad.conf
 !bat
 !emacs
 !dunst
@@ -30,3 +26,11 @@
 !emacs
 !tmux
 !mimeapps.list
+!bat
+!lynx
+!pipewire
+!pinentry
+!pulse
+!yt-dlp
+!mpv
+!newsboat

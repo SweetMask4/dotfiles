@@ -1,0 +1,19 @@
+#!/bin/sh
+
+launcher(){
+    fzf --reverse --cycle --prompt "$1"
+}
+
+mail=$(gpg --list-keys --keyid-format=long | grep uid | awk '{print $NF}' | tr -d "<>")
+file=$1
+[ -n "$file" ] || exit 1
+
+temp=$(mktemp -p "$XDG_RUNTIME_DIR" --suffix=.md)
+trap 'rm -f $temp' HUP INT QUIT TERM PWR EXIT
+
+gpg --decrypt --output "$temp" --yes --quiet "$file"
+$EDITOR "$temp"
+
+choice=$(printf '%s' "$mail" | launcher "Choose an email: " )
+
+gpg --encrypt --output "$file" --recipient "$choice" --yes --quiet "$temp"

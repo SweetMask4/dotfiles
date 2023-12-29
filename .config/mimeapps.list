@@ -74,6 +74,6 @@ application/x-xz-compressed-tar=xarchiver.desktop;xarchiver.desktop;
 
 [Default Applications]
 image/jpeg=sxiv.desktop
-inode/directory=pcmanfm.desktop
+inode/directory=lf.desktop
 x-scheme-handler/http=io.gitlab.librewolf-community.desktop
 x-scheme-handler/https=io.gitlab.librewolf-community.desktop
