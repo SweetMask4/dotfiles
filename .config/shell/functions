@@ -201,3 +201,7 @@ lynx "https://lite.duckduckgo.com/lite?kd=-1&kp=-1&q=$*"
 rae(){
 lynx "https://dle.rae.es/$*" 
 }
+
+yta() {
+    mpv --ytdl-format=bestaudio ytdl://ytsearch:"$*"
+}
