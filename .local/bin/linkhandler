@@ -1,8 +1,5 @@
 #!/bin/sh
 
-TERMINAL=alacritty
-BROWSER=io.gitlab.librewolf-community
-
 # Feed script a url or file location.
 # If an image, it will view in nsxiv,
 # if a video or gif, it will view in mpv

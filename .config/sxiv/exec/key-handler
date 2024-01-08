@@ -41,6 +41,9 @@ do
             [ "$(printf "No\\nYes" | dmenu -i -p "Really delete $file?")" = "Yes" ] &&
             rm "$file" && notify-send "$file deleted."
             ;;
+        "t") [ "$(printf "No\\nYes" | dmenu -i -p "Move to the papelera $file?")" = "Yes" ] &&
+            trash-put "$file" && notify-send "$file Do been moved to the papelera."
+            ;;
         "g")
             pacman -Qq "gimpr" >/dev/null 2>&1 && gimp "$file" ||
             notify-send "ERROR" "\nGimp is not installed! Install gimp if you want to use this function in sxiv:\n\nsudo pacman -S gimp" &&
@@ -56,7 +59,7 @@ do
             if [ ! -f "$filename" ]; then
                 touch "$filename"
             fi
-            echo "$file" > "$HOME"/.config/wall &&
+            echo "$PWD$file" > "$HOME"/.config/wall &&
             notify-send "$file has been set as your wallpaper." && exit 0
             ;;
         "7")

@@ -19,14 +19,14 @@ while true; do
 
     # Check if battery is fully charged
     if [ "$state" = "Charging" ] && [ "$percent" -ge 99 ] && [ "$notification_sent" = false ]; then
-        notify-send "Battery Charged" "Battery is fully charged."
+        notify-send -i battery-full-charged "Battery Charged" "Battery is fully charged." -u normal
         paplay /usr/share/sounds/freedesktop/stereo/complete.oga
         notification_sent=true
     fi
 
     # Check if battery is too low
     if [ "$state" = "Discharging" ] && [ "$percent" -le 25 ] && [ "$notification_sent" = false ]; then
-        notify-send "Low Battery" "${percent}% of battery remaining."
+        notify-send -i notification-battery-low "Low Battery" "${percent}% of battery remaining." -u critical
         paplay /usr/share/sounds/freedesktop/stereo/suspend-error.oga
         notification_sent=true
     fi

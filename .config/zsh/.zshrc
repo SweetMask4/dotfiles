@@ -7,17 +7,17 @@
 [[ $- != *i* ]] && return
 
 setopt autocd              # change directory just by typing its name
-setopt correct            # auto correct mistakes
+setopt correct             # auto correct mistakes
 setopt interactivecomments # allow comments in interactive mode
 setopt magicequalsubst     # enable filename expansion for arguments of the form ‘anything=expression’
 setopt nonomatch           # hide error message if there is no match for the pattern
 setopt notify              # report the status of background jobs immediately
 setopt numericglobsort     # sort filenames numerically when it makes sense
 setopt promptsubst         # enable command substitution in prompt
-setopt menucomplete       # Automatically highlight first element of completion menu
-setopt listpacked		      # The completion menu takes less space.
-setopt autolist           # Automatically list choices on ambiguous completion.
-setopt completeinword    # Complete from both ends of a word.
+setopt menucomplete        # Automatically highlight first element of completion menu
+setopt listpacked		       # The completion menu takes less space.
+setopt autolist            # Automatically list choices on ambiguous completion.
+setopt completeinword      # Complete from both ends of a word.
 
 WORDCHARS=${WORDCHARS//\/} # Don't consider certain characters part of the word
 
@@ -26,6 +26,8 @@ export PROMPT_EOL_MARK=""
 
 # configure key keybindings
 bindkey -v                                                      # vim key bindings
+export KEYTIMEOUT=1
+
 bindkey  "^[[H"   beginning-of-line                             # Home key
 bindkey  "\e[1~"  beginning-of-line                             # Home key
 if [[ "${terminfo[khome]}" != "" ]]; then
@@ -98,10 +100,9 @@ echo -ne '\e[5 q' # Use beam shape cursor on startup.
 preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
 
 # History configurations
-HISTFILE="$XDG_STATE_HOME/zsh/history"
-mkdir -p "$XDG_STATE_HOME/zsh"
 HISTSIZE=1000
 SAVEHIST=2000
+HISTFILE="$XDG_CACHE_HOME/history"
 setopt hist_expire_dups_first # delete duplicates first when HISTFILE size exceeds HISTSIZE
 setopt hist_ignore_dups       # ignore duplicated commands history list
 setopt hist_ignore_space      # ignore commands that start with space
@@ -231,7 +232,12 @@ fi
 
 # enable color support of ls, less and man, and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    if test -r ~/.dircolors;
+    then
+      eval "$(dircolors -b ~/.dircolors)"
+       else
+      eval "$(dircolors -b)"
+    fi
     export LS_COLORS="$LS_COLORS:ow=30;44:" # fix ls color for folders with 777 permissions
     alias ls='ls --color=auto'
     alias dir='dir --color=auto'
@@ -260,6 +266,9 @@ fi
 alias ll='ls -lh'
 alias la='ls -A'
 alias l='ls -CF'
+alias l.="ls -A | grep -E '^\.'"
+alias lla="ls -Alh"
+
 
    # enable auto-suggestions based on the history
     if [ -f /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
@@ -271,5 +280,5 @@ alias l='ls -CF'
     fi
 
 # load additional files
-[ -f ~/.config/shell/01-aliases ] && . ~/.config/shell/01-aliases
-[ -f ~/.config/shell/02-functions ] && . ~/.config/shell/02-functions
+[ -f ~/.config/shell/aliases ] && . ~/.config/shell/aliases
+[ -f ~/.config/shell/functions ] && . ~/.config/shell/functions

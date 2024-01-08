@@ -93,7 +93,12 @@ esac
 
 # enable color support of ls, less and man, and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    if test -r ~/.dircolors;
+    then
+        eval "$(dircolors -b ~/.dircolors)"
+    else
+        eval "$(dircolors -b)"
+    fi
     alias ls='ls --color=auto'
     alias dir='dir --color=auto'
     alias vdir='vdir --color=auto'
@@ -132,5 +137,5 @@ if ! shopt -oq posix; then
 fi
 
 # load additional files
-[ -f ~/.config/shell/01-aliases ] && . ~/.config/shell/01-aliases
-[ -f ~/.config/shell/02-functions ] && . ~/.config/shell/02-functions
+[ -f ~/.config/shell/aliases ] && . ~/.config/shell/aliases
+[ -f ~/.config/shell/functions ] && . ~/.config/shell/functions

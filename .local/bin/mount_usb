@@ -6,5 +6,5 @@ mountable=$(lsblk -lp | grep "part" | grep "$usb_name" | awk '{print $1, "(" $4 
 choice=$(printf '%s\n' "$mountable" | dmenu -i -p "usb" | awk '{print $1}')
 [ -z "$choice" ] && exit 1
 mount_dir="$dir/$(echo "$choice" | cut -d '/' -f 3)"
-[ ! -d "$mount_dir" ] && sudo mkdir -p "$mount_dir"
+[ ! -d "$mount_dir" ] && sudo mkdir -p "$mount_dir" 
 sudo mount "$choice" "$mount_dir" && notify-send "$choice mounted to $mount_dir"

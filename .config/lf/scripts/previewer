@@ -5,7 +5,7 @@ batorcat() {
     file="$1"
     shift
     if command -v bat >/dev/null 2>&1; then
-        bat --color=always --style=plain --pager=never "$file" "$@"
+        bat  bat --color always --style plain --paging never --wrap character "$file" "$@"
     else
         cat "$file"
     fi
@@ -60,8 +60,9 @@ case "$(basename "$file" | tr '[:upper:]' '[:lower:]')" in
     *.mp | *.wmv | *.dat | *.3gp | *.ogv | *.mpg | *.mpeg | *.vob | *.fl[icv] | *.m2v | *.mov | *.webm | *.ts | *.mts | *.m4v | *.r[am] | *.qt | *.divx)
         thumbnail="$LF_UEBERZUG_TEMPDIR/thumbnail.png"
         ffmpegthumbnailer -i "$file" -o "$thumbnail" -s 0 -q 5
-        preview "$thumbnail" "$@"
-        ;;
+        preview "$thumbnail" "$@" ;;
+    *.gpg) gpg -d -- "$file" 2>&1 ;;
+    *.html) lynx -dump -nonumbers -nolist "$file" ;;
     *.ino)
         batorcat --language=cpp "$file"
         ;;

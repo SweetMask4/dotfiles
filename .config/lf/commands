@@ -5,6 +5,10 @@
 cmd open ${{
     case $(file --mime-type "$f" -bL) in
         text/*|application/json) $EDITOR "$f";;
+        video/*) setsid -f mpv "$f" >/dev/null 2>&1 ;;
+        image/*) setsid -f sxiv "$f" >/dev/null 2>&1 ;;
+        application/epub+zip) setsid -f zathura "$f" >/dev/null 2>&1 ;;
+        application/pdf) setsid -f zathura "$1" >/dev/null 2>&1;;
         *) xdg-open "$f" ;;
     esac
 }}
@@ -136,24 +140,26 @@ cmd extract ${{
 	read ans
 	[ $ans = "y" ] && {
 		case $fx in
-			*.tar.bz2)   tar xjf $fx     ;;
-			*.tar.gz)    tar xzf $fx     ;;
-			*.bz2)       bunzip2 $fx     ;;
-			*.rar)       unrar e $fx     ;;
-			*.gz)        gunzip $fx      ;;
-			*.tar)       tar xf $fx      ;;
-			*.tbz2)      tar xjf $fx     ;;
-			*.tgz)       tar xzf $fx     ;;
-			*.zip)       unzip $fx       ;;
-			*.Z)         uncompress $fx  ;;
-			*.7z)        7z x $fx        ;;
-			*.tar.xz)    tar xf $fx      ;;
-		esac
+      *.tar.bz2)   tar xjf $fx   ;;
+      *.tar.gz)    tar xzf $fx   ;;
+      *.bz2)       bunzip2 $fx   ;;
+      *.rar)       unrar x $fx   ;;
+      *.gz)        gunzip $fx    ;;
+      *.tar)       tar xf $fx    ;;
+      *.tbz2)      tar xjf $fx   ;;
+      *.tgz)       tar xzf $fx   ;;
+      *.zip)       unzip $fx     ;;
+      *.Z)         uncompress $fx;;
+      *.7z)        7z x $fx      ;;
+      *.deb)       ar x $fx      ;;
+      *.tar.xz)    tar xf $fx    ;;
+      *.tar.zst)   tar xf $fx    ;;
+    esac
 	}
 }}
 
 # compress files
-cmd zip %zip -rj  "$f" "$f"
+cmd zip %zip -r  "$f" "$f"
 cmd tar %tar cvf "$f.tar" "$f"
 cmd targz %tar cvzf "$f.tar.gz" "$f"
 cmd tarbz2 %tar cjvf "$f.tar.bz2" "$f"

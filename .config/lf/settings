@@ -12,3 +12,5 @@ set ignorecase true      # Ignore case in sorting and search patterns.
 set truncatechar ⋯       # Truncate character shown at the end when the file name does not fit to the pane. 
 set hiddenfiles ".*:*.aux:*.log:*.bbl:*.bcf:*.blg:*.run.xml"
 set autoquit true
+# Source Bookmarks
+# source "~/.config/shell/bm-files"

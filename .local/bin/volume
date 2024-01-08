@@ -13,9 +13,9 @@ get_volume() {
 # Send volume notification
 send_notification() {
     if [ "$(is_muted)" = "yes" ]; then
-        notify-send -i audio-volume-muted -a "Volume" -r "9993" -u low "Muted" " "
+        notify-send -i notification-audio-volume-muted -a "Volume" -r "9993" -u low "Muted"
     else
-        notify-send -i audio-volume-high -a "Volume" -r "9993" -h int:value:"$(get_volume)" -h string:x-canonical-private-synchronous:"" "Volume: $(get_volume)%"
+        notify-send -i notification-audio-volume-high -a "Volume" -r "9993" -h int:value:"$(get_volume)" -h string:x-canonical-private-synchronous:"" "Volume: $(get_volume)%" 
     fi
 }
 
@@ -34,19 +34,22 @@ adjust_volume() {
 
     volumen=$(get_volume)
     case "$1" in
-        "up") [ "$volumen" != 100 ] && volumen_cons=$((volumen+5)) ;;
-        "down") volumen_cons=$((volumen-5)) ;;
-        "mute") pactl set-sink-mute @DEFAULT_SINK@ toggle ;;
+        "u") [ "$volumen" != 100 ] && volumen_cons=$((volumen+5)) ;;
+        "d") volumen_cons=$((volumen-5)) ;;
+        "m") pactl set-sink-mute @DEFAULT_SINK@ toggle ;;
     esac
 
-    pactl set-sink-volume @DEFAULT_SINK@ "$volumen_cons"%
+    [ -n "$volumen_cons" ] && pactl set-sink-volume @DEFAULT_SINK@ "$volumen_cons"%
 
     send_notification
 }
 
 # Main script
-case "$1" in
-    up | down | mute)
-        adjust_volume "$1"
-        ;;
-esac
+while getopts 'udm' option; do
+    case "$option" in
+        u | d | m)
+            adjust_volume "$option"
+            ;;
+        * ) exit 1 ;;
+    esac
+done

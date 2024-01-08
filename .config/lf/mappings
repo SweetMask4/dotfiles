@@ -54,6 +54,10 @@ map <c-b> fzf-edit
 map gs fzf_search
 map <c-f> fzf_jump
 
+# misc 
+map W $setsid -f $TERMINAL >/dev/null 2>&1
+map Y $printf "%s" "$fx" | xclip -selection clipboard
+
 # Movement
 map gtr cd ~/.local/share/Trash/files
 map gus cd /mnt

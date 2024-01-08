@@ -1,0 +1,18 @@
+#!/bin/sh
+
+# Search in a browser directly through dmenu
+search() {
+    URL='https://searx.be/?q='
+    query=$(echo '' | dmenu -p "Search:")
+    if [ -n "$query" ]; then
+        query=$(printf "%s" "$query" | sed "s| |+|g")
+        xdg-open "${URL}${query}" 2> /dev/null
+    fi
+}
+
+while getopts "wql" option; do
+    case $option in
+        w ) search ;;
+        *) exit 0;;
+    esac
+done

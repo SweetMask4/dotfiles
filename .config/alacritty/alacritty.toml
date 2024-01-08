@@ -1,24 +1,20 @@
-import = ["/home/sweetmask/.config/alacritty/colors.toml", "/home/sweetmask/.config/alacritty/fonts.toml"]
+import = ["/home/sweetmask/.config/alacritty/colors.toml", "/home/sweetmask/.config/alacritty/fonts.toml", "/home/sweetmask/.config/alacritty/keyboard.toml"]
 live_config_reload = true
-
-[cursor]
-blink_interval = 550
-unfocused_hollow = false
-
-[cursor.style]
-blinking = "On"
-shape = "Block"
 
 [env]
 TERM = "xterm-256color"
 
-[selection]
-save_to_clipboard = false
+[scrolling]
+history = 5000
 
 [window]
-decorations = "none"
-dynamic_title = true
+dynamic_padding = false
 opacity = 1.0
+title = "Alacritty"
+
+[window.class]
+general = "Alacritty"
+instance = "Alacritty"
 
 [window.padding]
 x = 6

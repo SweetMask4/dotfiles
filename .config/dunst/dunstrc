@@ -9,7 +9,6 @@ origin = top-right
 offset = 10x92
 indicate_hidden = yes
 shrink = yes
-timeout = 5
 
 transparency = 0
 separator_height = 2
@@ -30,7 +29,7 @@ idle_threshold = 120
 show_age_threshold = 60
 sort = no
 word_wrap = yes
-ignore_newline = yes
+ignore_newline = no
 stack_duplicates = false
 hide_duplicate_count = yes
 show_indicators = no
@@ -50,14 +49,16 @@ mouse_middle_click = do_action
 mouse_right_click = close_all
 
 [urgency_low]
+timeout = 3
 background = "#1E1E2E"
 foreground = "#CDD6F4"
 
 [urgency_normal]
+timeout = 6
 background = "#1E1E2E"
 foreground = "#CDD6F4"
 
 [urgency_critical]
+timeout = 0
 background = "#1E1E2E"
 foreground = "#CDD6F4"
-frame_color = "#FAB387"

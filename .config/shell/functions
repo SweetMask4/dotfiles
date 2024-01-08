@@ -71,7 +71,7 @@ xdg-open "$(find -type f | fzf)"
 # Function for creating a backup file
 # ex: backup file.txt or backup foldername
 # result: copies file as file.txt.bak
-backub(){
+backup(){
     file=$1
     cp -r "$file" "$file".bak
 }
@@ -142,8 +142,7 @@ recompile_suckless(){
     sudo make clean install
 }
 
-#
-function pdf_to_png() {
+pdf_to_png() {
     convert -verbose -density 350 -trim "$1" -quality 100 -flatten "${1%.pdf}".png
 }
 
@@ -151,27 +150,54 @@ function pdf_compress() {
     gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/ebook -dNOPAUSE -dQUIET -dBATCH -sOutputFile="$1_compressed" "$1" && mv "$1_compressed" "$1"
 }
 
-function create() {
+create() {
     mkdir -p "$1" && cd "$1"
 }
 
-function acp() {
+acp() {
   git add .
   git commit -m "$1"
   git push
 }
 
 recording() {
-  ffmpeg -f x11grab -s 1366x768 -i :0.0 -c:v libx264 -preset ultrafast "$HOME/Videos/recording/$(date +'%Y-%m-%d_%H-%M-%S').mp4"
+  ffmpeg -v quiet -stats -f x11grab -s 1366x768 -i :0.0 -c:v libx264 -preset ultrafast "$HOME/Videos/recording/$(date +'%Y-%m-%d_%H-%M-%S').mp4"
 }
 
 update(){
-  paru -Syu --nocombinedupgrade
+  paru -Syu --noconfirm
   flatpak update --noninteractive --assumeyes
 }
 
-# not found
 command_not_found_handler() {
 	printf "%s%s? I don't know what is it\n" "$acc" "$0" >&2
     return 127
+}
+
+s6-restart(){
+  sudo s6-rc -d change "$1"
+  sudo s6-rc -u change "$1"
+}
+
+pin-generate(){
+ pin=$(shuf --random-source=/dev/urandom -i 0-9 -r -n 6 | paste -sd '')
+ echo "$pin" | xclip -sel clip
+ echo "pin: $pin"
+}
+
+pingg(){
+if wget -q --spider http://archlinux.org; 
+then
+echo "Net is on" 
+else 
+echo "Net is off"
+fi
+}
+
+duck(){
+lynx "https://lite.duckduckgo.com/lite?kd=-1&kp=-1&q=$*"
+}
+
+rae(){
+lynx "https://dle.rae.es/$*" 
 }

@@ -63,14 +63,14 @@ alias untar='tar -xvzf'
 
 # adding flags
 alias df='df -h'           # human-readable sizes
-alias free='free -m'       # show sizes in MB
+alias free='free -mt'       # show sizes in MB
 alias duh='du -h --max-depth=1'
 alias mountedinfo='df -hT'
 alias temperature='watch -n 2 sensors'
 alias shred="shred -zf"
 alias r="reset"
 alias dd="dd status=progress"
-alias myip="curl https://myip.wtf/text; echo"
+alias myip="curl https://ident.me; echo"
 alias wget="wget -c --user-agent 'noleak'"
 alias bc="bc -ql"
 alias rsync="rsync -vrPlu"
@@ -80,6 +80,7 @@ alias ??="rae"
 alias ?="duck"
 alias irssi="irssi --config="$XDG_CONFIG_HOME"/irssi/config --home="$XDG_DATA_HOME"/irssi"
 alias mbsync="mbsync -c "$XDG_CONFIG_HOME"/isync/mbsyncrc"
+alias unhblock="hblock -S none -D none"
 
 # ps
 alias psa="ps auxf"
@@ -152,9 +153,22 @@ alias tobash="sudo chsh $USER -s /bin/bash && echo 'Now log out.'"
 alias tozsh="sudo chsh $USER -s /bin/zsh && echo 'Now log out.'"
 alias tofish="sudo chsh $USER -s /bin/fish && echo 'Now log out.'"
 
+#youtube download
+alias yta-aac="yt-dlp --extract-audio --audio-format aac "
+alias yta-best="yt-dlp --extract-audio --audio-format best "
+alias yta-flac="yt-dlp --extract-audio --audio-format flac "
+alias yta-mp3="yt-dlp --extract-audio --audio-format mp3 "
+alias ytv-best="yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio' --merge-output-format mp4 "
+
+# android
+alias copyandroid="adb push --sync"
+alias copylinux="adb pull -a"
+
 # termbin
 alias tb="nc termbin.com 9999"
 alias tbc="nc termbin.com 9999 | xclip -selection c"
 
 # the terminal rickroll
 alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | sh'
+
+alias relax='mpv --no-video https://www.youtube.com/watch?v=UfcAVejslrU&t=104'

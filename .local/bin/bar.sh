@@ -42,6 +42,7 @@ pkg_updates() {
 battery() {
     get_status=$(cat /sys/class/power_supply/BAT?/status)
     get_capacity=$(cat /sys/class/power_supply/BAT?/capacity)
+    [ "$get_capacity" -gt 100 ] && get_capacity=100
     # Set battery icon based on capacity and status
     if [ "$get_status" = "Discharging" ]; then
         if [ "$get_capacity" -ge 90 ]; then

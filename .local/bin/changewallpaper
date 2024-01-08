@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 setbg() {
     case "$XDG_SESSION_TYPE" in
@@ -24,4 +24,3 @@ if [ -n "$wallpapers" ]; then
 else
     echo "No wallpapers found in $wallpaper_dir" >&2
 fi
-
